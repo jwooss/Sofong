@@ -246,3 +246,33 @@ p{
     color: #333 !important;
     font-size: 16px !important;
  }
+
+ .fp-controlArrow {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+    position: absolute;
+    z-index: 4;
+    top: 10%;
+    cursor: pointer;
+    width: 60px !important;
+    height: 50px;
+    border-style: solid;
+    margin-top: -38px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    background: url(../img/image.png) no-repeat center;
+    background-size: 100%;
+    border: 0px;
+}
+.fp-controlArrow.fp-prev {
+    left: 40px;
+    transform: rotate(180deg);
+}
+.fp-controlArrow.fp-next {
+    right: 40px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}

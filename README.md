@@ -10,6 +10,6 @@
 
 ## 스택 ( 언어 )
 
-Front-end - React, Recoil, StyledComponent, React Helmet, React Query
-Back-end - Django, MongoDB
+Front-end - React, Recoil, StyledComponent, React Helmet, React Query<br>
+Back-end - Django, MongoDB<br>
 Infra - AWS, NGINX

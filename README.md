@@ -13,3 +13,12 @@
 Front-end - React, Recoil, StyledComponent, React Helmet, React Query<br>
 Back-end - Django, MongoDB<br>
 Infra - AWS, NGINX
+
+
+<br><br>
+
+# 04 - 12
+
+| 김현민 | 김택준 | 홍인성 |
+| :------------------: | :----------: | :------------: | 
+|  퍼블리싱 프로토타입 작성    |  🟢  |  🟢   |

@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/README.assets/preview.png" width="250px">
+    <img src="/README.assets/preview.png">
 <p/>
 
 # 🎶 기분에 따른 노래 추천 설문 웹 🎶

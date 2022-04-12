@@ -1,6 +1,8 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79036088/162886550-0fb04dd6-b620-4534-a57b-53bc5a72b0f5.png">
+    <img src="https://user-images.githubusercontent.com/79036088/162887245-c3606314-3792-4d41-9080-a0bc08c57ea2.png">
 <p/>
+
+<br><br>
 
 # 🎶 소퐁(Sofong) 🎶
 

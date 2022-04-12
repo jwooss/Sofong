@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="/README.assets/preview.png">
+<p/>
+
 # 🎶 기분에 따른 노래 추천 설문 웹 🎶
 
 이 프로젝트는, 병평에 첫 프로젝트로 설문조사를 통해 기분을 알아내고, <br>

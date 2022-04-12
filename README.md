@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/README.assets/preview.png">
+    <img src="https://user-images.githubusercontent.com/79036088/162886550-0fb04dd6-b620-4534-a57b-53bc5a72b0f5.png">
 <p/>
 
 # 🎶 소퐁(Sofong) 🎶

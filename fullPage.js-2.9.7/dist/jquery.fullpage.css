@@ -57,24 +57,25 @@ html.fp-enabled,
     -ms-user-select: none; /* IE10+ */
     position: absolute;
     z-index: 4;
-    top: 50%;
+    top: 10%;
     cursor: pointer;
-    width: 0;
-    height: 0;
+    width: 60px;
+    height: 50px;
     border-style: solid;
     margin-top: -38px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    background: url(../img/image.png) no-repeat center;
+    background-size: 100%;
+    border: 0px;
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    left: 40px;
+    transform: rotate(180deg);
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
+    right: 40px;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
 }

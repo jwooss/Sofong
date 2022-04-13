@@ -1,0 +1,24 @@
+{
+  "name": "sofong",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r     <img src=\"https://user-images.githubusercontent.com/79036088/162887245-c3606314-3792-4d41-9080-a0bc08c57ea2.png\">\r <p/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ByeongPyung/Sofong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ByeongPyung/Sofong/issues"
+  },
+  "homepage": "https://github.com/ByeongPyung/Sofong#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

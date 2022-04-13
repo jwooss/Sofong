@@ -23,7 +23,7 @@
 <br><br>
 
 # 📚 기술 스택 📚
-> ### Front-end - React, Recoil, StyledComponent, React Helmet, React Query
+> ### Front-end - Html, Sass, JavaScript
 > ### Back-end - Django, MongoDB
 > ### Infra - AWS, NGINX
 

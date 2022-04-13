@@ -1,4 +1,8 @@
-@CHARSET "ISO-8859-1";
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
 /* Reset CSS
  * --------------------------------------- */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
@@ -84,7 +88,9 @@ p {
 }
 
 .section {
+  position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 #menu li {
@@ -302,5 +308,88 @@ p {
   right: 40px;
   border-width: 38.5px 0 38.5px 34px;
   border-color: transparent transparent transparent #fff;
+}
+
+.fp-tableCell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fp-tableCell h1 {
+  max-width: 1300px;
+  letter-spacing: -2px;
+  word-spacing: 5px;
+  line-height: 80px;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: 'East Sea Dokdo', cursive;
+  text-shadow: 0px 0px 4px #fff;
+  opacity: 0;
+}
+
+.fp-tableCell .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 300px;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.btns button {
+  all: unset;
+  position: relative;
+  width: 30%;
+  color: #000;
+  font-size: 4.4rem;
+  padding: 20px 10px;
+  font-family: 'East Sea Dokdo', cursive;
+  border-radius: 1px;
+  text-shadow: 2px 2px 5px #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  -webkit-transform: translateY(-14px) scale(1.2);
+          transform: translateY(-14px) scale(1.2);
+}
+
+#s1,
+#s2 {
+  opacity: 0;
+}
+
+.black {
+  position: relative;
+  color: #0a3d62;
+  margin-right: 6px;
+}
+
+.black::after {
+  content: '★';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  font-size: 1.4rem;
+  color: transparent;
+  text-shadow: 0px 0px 6px #0a3d62;
 }
 /*# sourceMappingURL=styls.css.map */

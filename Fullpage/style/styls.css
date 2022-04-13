@@ -335,7 +335,6 @@ p {
   font-weight: bold;
   font-family: 'East Sea Dokdo', cursive;
   text-shadow: 0px 0px 4px #fff;
-  opacity: 0;
 }
 
 .fp-tableCell .btns {
@@ -361,7 +360,6 @@ p {
   text-shadow: 2px 2px 5px #fff;
   -webkit-transition: all .5s;
   transition: all .5s;
-  opacity: 0;
   cursor: pointer;
 }
 
@@ -372,12 +370,17 @@ p {
           transform: translateY(-14px) scale(1.2);
 }
 
-#s1,
-#s2 {
+#slide1 h1,
+#slide1 button {
   opacity: 0;
 }
 
+#section1 h1 {
+  font-size: 16rem;
+}
+
 .black {
+  all: unset;
   position: relative;
   color: #0a3d62;
   margin-right: 6px;
@@ -389,7 +392,5 @@ p {
   left: -50%;
   top: -50%;
   font-size: 1.4rem;
-  color: transparent;
-  text-shadow: 0px 0px 6px #0a3d62;
 }
 /*# sourceMappingURL=styls.css.map */

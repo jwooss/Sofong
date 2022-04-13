@@ -20,13 +20,13 @@ $(document).ready(function() {
             }, 500, 'swing' );}
 
             if(index == 5){
-                $('#s1').animate( {
+                $('#slide1').find('.btns').find('#s1').animate( {
                     opacity: 1
                 }, 500, 'swing' );
-                $('#s2').animate( {
+                $('#slide1').find('.btns').find('#s2').animate( {
                     opacity: 1
                 }, 500, 'swing' );
-                $('#s3').animate( {
+                $('#slide1').find('#s3').animate( {
                     opacity: 1
                 }, 200, 'swing' );
             }

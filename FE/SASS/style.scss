@@ -1,17 +1,24 @@
-@import 'base/reset';
-@import 'abstracts/mixins';
-@import 'abstracts/Variable';
-@import 'components/componets';
+::-webkit-scrollbar {
+  display: none;
+}
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    body{
-        .section1{
-            @include FlexMiddleLeft;
-            flex-direction: column;
-            background: $MainColor1;
-            min-height: 100vh;
-        }
+@import "base/reset";
+@import "abstracts/mixins";
+@import "abstracts/Variable";
+@import "components/componets";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  body {
+    .section1 {
+      @include FlexMiddleLeft;
+      flex-direction: column;
+      background: $MainColor1;
+      min-height: 100vh;
+      .btns {
+        max-width: 300px;
+      }
     }
+  }
 }

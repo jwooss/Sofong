@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sofong</title>
-        <!-- Open Graph -->
-        <meta property="og:title" content="Sofong" />
-        <meta property="og:description" content="🌿 기분에 따라서 음악을 추천해주는 웹 입니다. 🌿" />
-        <meta property="og:image" content="IMG/preview.png" />
-        <meta property="og:url" content="www.naver.com" />
-        <!-- Open Graph Twitter -->
-        <meta name="twitter:title" content="Sofong" />
-        <meta name="twitter:description" content="🌿 기분에 따라서 음악을 추천해주는 웹 입니다. 🌿" />
-        <meta name="twitter:image" content="IMG/preview.png" />
-        <meta property="og:url" content="www.naver.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <!-- 독도 폰트 -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet"> 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
-        <!-- 스타일, 스크립트 -->
-        <link rel="stylesheet" href="SASS/style.css">
-        <script src="JS/script.js"></script>
-        <script src="JS/page.js"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofong</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sofong" />
+    <meta property="og:description" content="🌿 기분에 따라서 음악을 추천해주는 웹 입니다. 🌿" />
+    <meta property="og:image" content="IMG/preview.png" />
+    <meta property="og:url" content="www.naver.com" />
+    <!-- Open Graph Twitter -->
+    <meta name="twitter:title" content="Sofong" />
+    <meta name="twitter:description" content="🌿 기분에 따라서 음악을 추천해주는 웹 입니다. 🌿" />
+    <meta name="twitter:image" content="IMG/preview.png" />
+    <meta property="og:url" content="www.naver.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- 독도 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
+    <!-- Lottie Script -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.2/lottie.min.js"
+        integrity="sha512-R47oG09eydaf225nXyDdSWJ8frKwxkC7QIHXdPpbUx9KaAiC6akjpWxTBw1hb7whk7P2sJNuRhS2ljSBegnIPA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 스타일, 스크립트 -->
+    <link rel="stylesheet" href="SASS/style.css">
+    <script src="JS/components/page.js" defer></script>
+</head>
+
 <body>
     <div class="screen">
         <div class="section1" id="Section">
             <h1 class="Title" id="Title">Sofong</h1>
-            <button class="btn" id="Start">테스트 시작</button>
+            <div id="btn">
+                <button class="btn" id="Start">테스트 시작</button>
+                <div id="LottieBTN"></div>
+            </div>
         </div>
     </div>
 </body>

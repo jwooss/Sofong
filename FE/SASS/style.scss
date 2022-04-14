@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
     body{
         .section1{
-            @include FlexCenter;
+            @include FlexMiddleLeft;
             flex-direction: column;
             background: $MainColor1;
             min-height: 100vh;

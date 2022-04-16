@@ -2,17 +2,35 @@
   display: none;
 }
 
+<<<<<<< HEAD
 @import 'abstracts/Load';
+=======
+@import "base/reset";
+@import "abstracts/mixins";
+@import "abstracts/Variable";
+@import "components/componets";
+>>>>>>> 2fcbb540bf9cb29fb483d71ba95b95e3da407be4
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   body {
+<<<<<<< HEAD
     background-color: $MainColor1;
     .screen{
       display: none;
       opacity: 0;
       transition: all .5s;
+=======
+    .section1 {
+      @include FlexMiddleLeft;
+      flex-direction: column;
+      background: $MainColor1;
+      min-height: 100vh;
+      .btns {
+        max-width: 300px;
+      }
+>>>>>>> 2fcbb540bf9cb29fb483d71ba95b95e3da407be4
     }
   }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 페이지 관련 동적 효과
 AOS.init();
 // Loading
@@ -39,3 +40,24 @@ StartBTN.addEventListener('click', () => {
         UnderMain.style.opacity = '1';
     }, 500);
 })
+=======
+
+const StartBTN = document.querySelector("#Start");
+const LottieBTN = document.querySelector("#btn #LottieBTN");
+
+let animationSkipForward = bodymovin.loadAnimation({
+        container: LottieBTN,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: "https://assets10.lottiefiles.com/packages/lf20_vixkj2dq.json"
+});
+
+  StartBTN.addEventListener('click', function() {
+    LottieBTN.style.opacity = '1';
+    animationSkipForward.playSegments([0,60], true);
+    setTimeout(() => {
+        LottieBTN.style.opacity = '0';
+    }, 1000);
+});
+>>>>>>> 2fcbb540bf9cb29fb483d71ba95b95e3da407be4

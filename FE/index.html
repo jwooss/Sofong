@@ -35,59 +35,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.2/lottie.min.js"
         integrity="sha512-R47oG09eydaf225nXyDdSWJ8frKwxkC7QIHXdPpbUx9KaAiC6akjpWxTBw1hb7whk7P2sJNuRhS2ljSBegnIPA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <!-- AOS CDN Animation on Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 스타일, 스크립트 -->
     <link rel="stylesheet" href="SASS/style.css">
-    <script src="JS/components/page.js" defer></script>
+    <script type="module" src="JS/components/page.js" defer></script>
+    <script type="module" src="JS/components/animation.js" defer></script>
 </head>
-
-
 <body>
     <div class="LoadingSec" id="Sec1">
         <div class="inner">
             <lottie-player src="JS/JSON/Loading.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-            <span class="LoadingSpan">그렇게 됐습니다. 그렇게 됐습니다. 그렇게 됐습니다. 그렇게 됐습니다.</span>
+            <span class="LoadingSpan">어랏, 에러에요!</span>
         </div>
     </div>
     <div class="screen">
         <div class="section1 Main" id="Sec1">
             <div class="inner">
                 <h1 class="Title" id="Title">Sofong</h1>
+                <div class="ctnr"></div>
+                <div class="ctnr2"></div>
                 <button class="btn" id="Start">테스트 시작</button>
             </div>
         </div>
         <div class="UnderMain">
-            <div class="Section2 Sec" id="Sec2">
-                <div class="inner">
-                    <div class="left">
-                        <h3 class="introTitle leftTop">오늘의 기분은 어떠신가요?<br>우울한가요?<br>좋은 일이 있어서 기쁘신가요?</h3>
-                    </div>
-                    <div class="right">
-                        <lottie-player class="Bottom" src="JS/JSON/Intro1.json"  background="transparent"  speed="1"  style="width: 64rem; height: 64rem;"  loop  autoplay></lottie-player>
-                    </div>
-                </div>
-            </div>
-            <div class="Section3 Sec" id="Sec1">
-                <div class="inner">
-                    <div class="left">
-                        <lottie-player class="Bottom" src="JS/JSON/Intro2.json"  background="transparent"  speed="1"  style="width: 64rem; height: 64rem;"  loop  autoplay></lottie-player>  
-                    </div>
-                    <div class="right">
-                        <h3 class="introTitle rightTop">당신의 기분에 맞는 노래를<br>추천해드릴게요!</h3>
+            <section class="slide">
+                <div class="Section2 Sec" id="Sec2">
+                    <div class="inner">
+                        <div class="left">
+                            <h3 class="introTitle leftTop">오늘의 기분은 어떠신가요?<br>우울한가요?<br>좋은 일이 있어서 기쁘신가요?</h3>
+                        </div>
+                        <div class="right" id="Spe1">
+                            <!-- <img src="IMG/Intro1.png" alt="Intro1">
+                            <img src="IMG/Intro2.png" alt="Intro2">
+                            <span class="hole"></span> -->
+                            <lottie-player class="Bottom" src="JS/JSON/Intro1.json"  background="transparent"  speed="1"  style="width: 64rem; height: 64rem;"  loop  autoplay></lottie-player>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="Section4 Sec" id="Sec2">
-                <div class="inner">
-                    <div class="left">
-                        <h3 class="introTitle">그럼 저에게 기분을 알려주러<br>떠나볼까요?</h3>
+                <div class="Section3 Sec" id="Sec1">
+                    <div class="inner">
+                        <div class="left">
+                            <lottie-player class="Bottom" src="JS/JSON/Intro2.json"  background="transparent"  speed="1"  style="width: 64rem; height: 64rem;"  loop  autoplay></lottie-player>  
+                        </div>
+                        <div class="right">
+                            <h3 class="introTitle rightTop">당신의 기분에 맞는 노래를<br>추천해드릴게요!</h3>
+                        </div>
                     </div>
-                    <div class="right"></div>
                 </div>
-            </div>
+                <div class="Section4 Sec" id="Sec2">
+                    <div class="inner">
+                        <div class="left">
+                            <h3 class="introTitle leftTop">그럼 저에게 기분을 알려주러<br>떠나볼까요?</h3>
+                        </div>
+                        <div class="right">
+                            <lottie-player class="Bottom" style="bottom: 8%;" src="https://assets7.lottiefiles.com/packages/lf20_ivfdbpcr.json"  background="transparent" speed="1" style="width: 32rem; height: 32rem;"  autoplay loop ></lottie-player>
+                            <lottie-player class="Bottom" src="https://assets8.lottiefiles.com/packages/lf20_qwuspbmf.json"  background="transparent" speed="1" style="width: 32rem; height: 32rem;" id="chainLoadPlayer" ></lottie-player>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </body>
-
 </html>

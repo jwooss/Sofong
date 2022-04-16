@@ -1,0 +1,62 @@
+
+#Sec1, #Sec2 {
+    position: relative;
+    width: 100%;
+    background-color: $MainColor1;
+    transition: all .5s;
+
+    .inner{
+        position: relative;
+        @include FlexMiddleLeft;
+        flex-direction: column;
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        transition: all .5s;
+    }
+}
+
+.UnderMain{
+    #Sec1,
+    #Sec2{
+        .inner{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            div{
+                position: relative;
+                width: 100%;
+                min-height: 100%;
+                .leftTop{
+                    position: absolute;
+                    left: 10%;
+                    top: 10%;
+                    text-align: left;
+                }
+                .rightTop{
+                    position: absolute;
+                    right: 10%;
+                    top: 10%;
+                    text-align: right;
+                }
+                .Top{
+                    position: absolute;
+                    top: 10%;
+                }
+                .Bottom{
+                    position: absolute;
+                    bottom: 10%;
+                }
+            }
+        }
+    }
+}
+
+#Sec2{background-color: $MainColor2;};
+
+.UnderMain{
+    display: none;
+    opacity: 0;
+    transition: all .5s;
+}

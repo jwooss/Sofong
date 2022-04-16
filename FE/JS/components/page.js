@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 // 페이지 관련 동적 효과
-AOS.init();
+
 // Loading
 const LoadingSpan = document.querySelector(".LoadingSpan");
 const SpanList = ['저희 처음 프로젝트 이름은 Music Select 였던 거 아시나요..? 많이 촌스럽죠..', '레코딩 하는 중.. 이라고 할까요?', '살면서 첫 프로젝트 입니다 재밌으셨으면 좋겠습니다!', '저작권 구글링 하는 중...', '점점 멘트 고갈되는 중...', '코딩 하는 법 겁색중..'];
@@ -40,24 +39,3 @@ StartBTN.addEventListener('click', () => {
         UnderMain.style.opacity = '1';
     }, 500);
 })
-=======
-
-const StartBTN = document.querySelector("#Start");
-const LottieBTN = document.querySelector("#btn #LottieBTN");
-
-let animationSkipForward = bodymovin.loadAnimation({
-        container: LottieBTN,
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        path: "https://assets10.lottiefiles.com/packages/lf20_vixkj2dq.json"
-});
-
-  StartBTN.addEventListener('click', function() {
-    LottieBTN.style.opacity = '1';
-    animationSkipForward.playSegments([0,60], true);
-    setTimeout(() => {
-        LottieBTN.style.opacity = '0';
-    }, 1000);
-});
->>>>>>> 2fcbb540bf9cb29fb483d71ba95b95e3da407be4

@@ -1,17 +1,18 @@
-@import 'base/reset';
-@import 'abstracts/mixins';
-@import 'abstracts/Variable';
-@import 'components/componets';
+::-webkit-scrollbar {
+  display: none;
+}
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    body{
-        .section1{
-            @include FlexMiddleLeft;
-            flex-direction: column;
-            background: $MainColor1;
-            min-height: 100vh;
-        }
+@import 'abstracts/Load';
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  body {
+    background-color: $MainColor1;
+    .screen{
+      display: none;
+      opacity: 0;
+      transition: all .5s;
     }
+  }
 }

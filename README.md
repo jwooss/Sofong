@@ -15,7 +15,7 @@
 # 🙋‍♂️ 참가 팀원, 역할 🙋‍♂️
 | 팀원 | 역할 | 역할 |
 |:------:|:------:|:------:|
-| [ᴋɪᴍʜʏᴇᴏɴᴍɪɴ](https://github.com/qetqet910) | 팀장 | 풀스택 |
+| [ᴋɪᴍʜʏᴇᴏɴᴍɪɴ](https://github.com/qetqet910) | 팀장 | 풀스택, 디자인 |
 | [ʜᴏɴɢɪɴsᴜɴɢ](https://github.com/BackdevHong) | 팀원 | 프론트 |
 | [ᴋɪᴍᴛᴀᴇᴋᴊᴜɴ](https://github.com/KIMTAEKJUN) | 팀원 | 백엔드, DB |
 | [ʟᴇᴇᴊᴇᴏɴɢᴍɪɴ](https://github.com/rnlsrnlsdl) | 팀원 | 기획, 디자인 |

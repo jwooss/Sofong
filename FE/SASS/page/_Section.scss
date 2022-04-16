@@ -14,10 +14,42 @@
         min-height: 100vh;
         margin: 0 auto;
         transition: all .5s;
+        .ctnr{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 600px;
+            height: 300px;
+            transform: translateX(-50%);
+            z-index: 88;
+        }
+        .ctnr2{
+            position: absolute;
+            left: 50%;
+            top: 75%;
+            transform: translate(-50%, -50%);
+            width: 200rem;
+            opacity: 0;
+            transition: all .3s;
+        }
     }
 }
 
 .UnderMain{
+    display: none;
+    opacity: 0;
+    transition: all .5s;
+    white-space: nowrap;
+    top: 0%;
+    width: 300% !important;
+    .slide{
+        position:absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        transition:transform .3s;
+    }
     #Sec1,
     #Sec2{
         .inner{
@@ -40,13 +72,12 @@
                     top: 10%;
                     text-align: right;
                 }
-                .Top{
-                    position: absolute;
-                    top: 10%;
-                }
+
                 .Bottom{
                     position: absolute;
                     bottom: 10%;
+                    right: 50%;
+                    transform: translateX(50%);
                 }
             }
         }
@@ -55,8 +86,33 @@
 
 #Sec2{background-color: $MainColor2;};
 
-.UnderMain{
-    display: none;
-    opacity: 0;
-    transition: all .5s;
-}
+// #Spe1{
+//     img{
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         width: 50%;
+//         transform: translateX(-50%);
+//     }
+//     .hole{
+//         position: absolute;
+//         top: 80%;
+//         left: 0px;
+//         width: 80%;
+//         height: 100px;
+//         background-color: #555;
+//         border-radius: 50%;
+//         &::after{
+//             content: '';
+//             position: absolute;
+//             width: calc(100% - 20%);
+//             height: calc(100% - 40%);
+//             top: 40%;
+//             left: 10%;
+//             background-color: #333;
+//             border-radius: 50%;
+//             overflow: hidden;
+//             box-sizing: border-box;
+//         }
+//     }
+// }

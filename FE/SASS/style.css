@@ -73,8 +73,8 @@ table {
 }
 
 .btn:hover {
-  -webkit-transform: scale(1.1) translateY(-6px);
-          transform: scale(1.1) translateY(-6px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   color: white;
   text-shadow: 0px 0px 6px #333;
 }
@@ -91,6 +91,7 @@ table {
   color: #333;
   cursor: pointer;
   margin-bottom: 300px;
+  z-index: 99;
 }
 
 .introTitle {
@@ -113,7 +114,7 @@ table {
   top: 0px;
   width: 100%;
   min-height: 100vh;
-  background-color: #F3F3F3;
+  background-color: #ececec;
   z-index: 999;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -194,7 +195,7 @@ table {
 #Sec1, #Sec2 {
   position: relative;
   width: 100%;
-  background-color: #F3F3F3;
+  background-color: #ececec;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -220,6 +221,57 @@ table {
   margin: 0 auto;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+#Sec1 .inner .ctnr, #Sec2 .inner .ctnr {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 600px;
+  height: 300px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 88;
+}
+
+#Sec1 .inner .ctnr2, #Sec2 .inner .ctnr2 {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200rem;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.UnderMain {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  white-space: nowrap;
+  top: 0%;
+  width: 300% !important;
+}
+
+.UnderMain .slide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .UnderMain #Sec1 .inner,
@@ -255,27 +307,17 @@ table {
   text-align: right;
 }
 
-.UnderMain #Sec1 .inner div .Top,
-.UnderMain #Sec2 .inner div .Top {
-  position: absolute;
-  top: 10%;
-}
-
 .UnderMain #Sec1 .inner div .Bottom,
 .UnderMain #Sec2 .inner div .Bottom {
   position: absolute;
   bottom: 10%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 #Sec2 {
   background-color: #F3F3F3;
-}
-
-.UnderMain {
-  display: none;
-  opacity: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
 }
 
 html {
@@ -284,7 +326,7 @@ html {
 }
 
 html body {
-  background-color: #F3F3F3;
+  background-color: #ececec;
 }
 
 html body .screen {

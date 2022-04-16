@@ -1,3 +1,6 @@
+// Import
+import { AniStart, AniStart2 } from "./animation.js";
+
 // 페이지 관련 동적 효과
 
 // Loading
@@ -10,7 +13,6 @@ const UnderMain = document.querySelector(".UnderMain");
 const StartBTN = document.querySelector("#Start");
 const Intros = document.querySelectorAll(".Sec");
 
-
 // Loading 관련 함수
 const RandomSpan = () => {
     let RanS = Math.floor(Math.random() * SpanList.length);
@@ -19,22 +21,48 @@ const RandomSpan = () => {
 const Loading = () => {
     LoadingSec.classList.add('Ani')
 }
+const WidthPage = () => {
+    const cont_2 = document.querySelector('.UnderMain');
+    const slider = document.querySelector('.slide');
+    const Section2 = document.querySelector('.Section2');
+    let s_move_max = (Section2.offsetWidth * 3 - window.innerWidth) * -1;
+    let s_pos = 0;
+
+    cont_2.addEventListener('wheel',function(e){
+        e.preventDefault;
+
+        s_pos -= e.deltaY;
+
+        if(s_pos < s_move_max){
+            s_pos = s_move_max;
+        }else if(s_pos > 0){
+            s_pos = 0;
+        }
+
+
+        slider.style.transform = `translateX(${s_pos}px)`;
+    });
+}
 
 RandomSpan();
 
 setTimeout(() => {
     Loading()
-    Screen.style.display = 'block';        
+    Screen.style.display = 'block';   
 }, 1000);
 
 setTimeout(() => {
-    Screen.style.opacity = '1'; 
+    Screen.style.opacity = '1';
+    AniStart();     
+
 }, 1600);
 
 StartBTN.addEventListener('click', () => {
     Main.classList.add('Ani');    
-    UnderMain.style.display = 'block';
+    AniStart2();
+    UnderMain.style.display = 'flex';
     UnderMain.style.transform = 'translateY(-100vh)';
+    WidthPage();
     setTimeout(() => {
         UnderMain.style.opacity = '1';
     }, 500);

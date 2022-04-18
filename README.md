@@ -34,7 +34,6 @@
 ***Git Branch -***
 ```markdown
 📝main
- ┃
  ┣🛠kimhyeonmin
  ┣🛠honginsung
  ┣🛠kimtaekjun

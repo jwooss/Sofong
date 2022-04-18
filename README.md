@@ -53,7 +53,6 @@ Git commit rules -
 Foldering -
 ```markdown
 📁Sofong
- ┃
  ┣📁FE
  ┃ ┣📁IMG
  ┃ ┃ ┣📁favicon

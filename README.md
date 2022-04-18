@@ -28,9 +28,9 @@
 > ### Infra - AWS, NGINX
 > ### Library - Lottie.js
 
-<br>
+<br><br>
 
-## ✏️ Code Convention ✏️
+# ✏️ Code Convention ✏️
 Git Branch -
 ```markdown
 📝main

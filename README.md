@@ -55,39 +55,43 @@ Foldering -
 📁Sofong
  ┃
  ┣📁FE
- ┃┣📁IMG
- ┃┃┣ 📁favicon
- ┃┃┗ PNG IMG
- ┃┣📁JS
- ┃┃┣📁compeonents
- ┃┃┃┣📝animation.js
- ┃┃┃┣📝page.js
- ┃┃┣📁JSON
- ┃┃┃┣📝Intro1.json
- ┃┃┃┣📝Intro2.json
- ┃┃┃┣📝Intro3.json
- ┃┃┃┣📝Loading.json
- ┃┣📁SASS
- ┃┃┣📁abstracts
- ┃┃┃┣📝_Load.scss
- ┃┃┃┣📝_mixins.scss
- ┃┃┃┣📝_Variable.scss
- ┃┃┣📁base
- ┃┃┃┣📝_reset.scss
- ┃┃┣📁components
- ┃┃┃┣📝_Button.scss
- ┃┃┃┣📝_components.scss
- ┃┃┃┣📝_IntroTitle.scss
- ┃┃┃┣📝_Title.scss
- ┃┃┣📁page
- ┃┃┃┣📝style.css
- ┃┃┃┣📝style.css.map
- ┃┃┃┣📝style.scss
- ┃┃┣📝.gitignore
- ┃┃┣📝index.html
- ┃┃┣📝package.lock.json
- ┃┃┣📝package.json
- ┃┃┣📝webpack.config.js
+ ┃ ┣📁IMG
+ ┃ ┃ ┣📁favicon
+ ┃ ┃ ┃ ┗⭐️favicon.ico
+ ┃ ┃ ┣📷arrow.png
+ ┃ ┃ ┣📷Intro1.png
+ ┃ ┃ ┣📷Intro2.png
+ ┃ ┃ ┗📷preview.png
+ ┃ ┣📁JS
+ ┃ ┃ ┣📁compeonents
+ ┃ ┃ ┃ ┣📝animation.js
+ ┃ ┃ ┃ ┗📝page.js
+ ┃ ┃ ┣📁JSON
+ ┃ ┃ ┃ ┣📝Intro1.json
+ ┃ ┃ ┃ ┣📝Intro2.json
+ ┃ ┃ ┃ ┣📝Intro3.json
+ ┃ ┃ ┃ ┗📝Loading.json
+ ┃ ┣📁SASS
+ ┃ ┃ ┣📁abstracts
+ ┃ ┃ ┃ ┣📝_Load.scss
+ ┃ ┃ ┃ ┣📝_mixins.scss
+ ┃ ┃ ┃ ┗📝_Variable.scss
+ ┃ ┃ ┣📁base
+ ┃ ┃ ┃ ┗📝_reset.scss
+ ┃ ┃ ┣📁components
+ ┃ ┃ ┃ ┣📝_Button.scss
+ ┃ ┃ ┃ ┣📝_components.scss
+ ┃ ┃ ┃ ┣📝_IntroTitle.scss
+ ┃ ┃ ┃ ┗📝_Title.scss
+ ┃ ┃ ┣📁page
+ ┃ ┃ ┃ ┣📝style.css
+ ┃ ┃ ┃ ┣📝style.css.map
+ ┃ ┃ ┃ ┗📝style.scss
+ ┃ ┃ ┣📝.gitignore
+ ┃ ┃ ┣📝index.html
+ ┃ ┃ ┣📝package.lock.json
+ ┃ ┃ ┣📝package.json
+ ┃ ┃ ┗📝webpack.config.js
  ┣📁BE(추가예정)
  ┃┣📁???
  ┣📝READMD.md

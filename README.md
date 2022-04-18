@@ -23,11 +23,76 @@
 <br><br>
 
 # 📚 기술 스택 📚
-> ### Front-end - Html, Sass, JavaScript, Lottie.js
+> ### Front-end - Html, Sass, JavaScript
 > ### Back-end - Django, MongoDB
 > ### Infra - AWS, NGINX
+> ### Library - Lottie.js
 
+<br>
 
+## ✏️ Code Convention ✏️
+Git Branch -
+```markdown
+📝main
+ ┃
+ ┣🛠kimhyeonmin
+ ┣🛠honginsung
+ ┣🛠kimtaekjun
+```
+
+Git commit rules -
+```markdown
+[Add] 기능추가 / FE, BE 구분해서 쓰기
+[Delete] 삭제 / FE, BE 구분해서 쓰기 / 삭제한 파일 명 정확하게 쓰기
+[Update] 기능 수정 / FE, BE 구분해서 쓰기
+[Fix] 버그 수정 / FE, BE 구분해서 쓰기
+[Docs] 문서 정리
+[Chore] 잡일
+```
+
+Foldering -
+```markdown
+📁Sofong
+ ┃
+ ┣📁FE
+ ┃┣📁IMG
+ ┃┃┣ 📁favicon
+ ┃┃┗ PNG IMG
+ ┃┣📁JS
+ ┃┃┣📁compeonents
+ ┃┃┃┣📝animation.js
+ ┃┃┃┣📝page.js
+ ┃┃┣📁JSON
+ ┃┃┃┣📝Intro1.json
+ ┃┃┃┣📝Intro2.json
+ ┃┃┃┣📝Intro3.json
+ ┃┃┃┣📝Loading.json
+ ┃┣📁SASS
+ ┃┃┣📁abstracts
+ ┃┃┃┣📝_Load.scss
+ ┃┃┃┣📝_mixins.scss
+ ┃┃┃┣📝_Variable.scss
+ ┃┃┣📁base
+ ┃┃┃┣📝_reset.scss
+ ┃┃┣📁components
+ ┃┃┃┣📝_Button.scss
+ ┃┃┃┣📝_components.scss
+ ┃┃┃┣📝_IntroTitle.scss
+ ┃┃┃┣📝_Title.scss
+ ┃┃┣📁page
+ ┃┃┃┣📝style.css
+ ┃┃┃┣📝style.css.map
+ ┃┃┃┣📝style.scss
+ ┃┃┣📝.gitignore
+ ┃┃┣📝index.html
+ ┃┃┣📝package.lock.json
+ ┃┃┣📝package.json
+ ┃┃┣📝webpack.config.js
+ ┣📁BE(추가예정)
+ ┃┣📁???
+ ┣📝READMD.md
+
+```
 <br><br>
 
 # ⭐ 04-12 ~ Todo ⭐
@@ -39,4 +104,4 @@
 | 김현민 | 김택준 | 홍인성 | 이정민 |
 | :------------------: | :------------------: | :------------------: | :------------------: |
 |  퍼블리싱 프로토타입 작성  |  Django 공부해오기  |  React 공부해오기  |  미리보기, 디자인 시안 만들기 | 
-|  70% 완성 | 진행중 | 진행중 | 50% 완성 |
+|  70% 완성 | 진행중 | 진행중 | 90% 완성 |

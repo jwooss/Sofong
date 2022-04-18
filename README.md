@@ -31,7 +31,7 @@
 <br><br>
 
 # ✏️ Code Convention ✏️
-## ***Git Branch -***
+***Git Branch -***
 ```markdown
 📝main
  ┃
@@ -40,7 +40,7 @@
  ┣🛠kimtaekjun
 ```
 
-## ***Git commit rules -***
+***Git commit rules -***
 ```markdown
 [Add] 기능추가 / FE, BE 구분해서 쓰기
 [Delete] 삭제 / FE, BE 구분해서 쓰기 / 삭제한 파일 명 정확하게 쓰기
@@ -50,7 +50,7 @@
 [Chore] 잡일
 ```
 
-## ***Foldering -***
+***Foldering -***
 ```markdown
 📁Sofong
  ┣📁FE

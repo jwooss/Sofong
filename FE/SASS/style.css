@@ -64,8 +64,8 @@ table {
   letter-spacing: -2px;
   word-spacing: 2px;
   text-shadow: 0px 0px 5px white;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -106,6 +106,76 @@ table {
   transition: all 0.5s;
   font-weight: bold;
   line-height: 160%;
+}
+
+.LeftFadeIn {
+  opacity: 1;
+  z-index: 999;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.RightFadeIn {
+  opacity: 1;
+  z-index: 999;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.TopFadeIn {
+  opacity: 1;
+  z-index: 999;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.BottomFadeIn {
+  opacity: 1;
+  z-index: 999;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.LeftFadeOut {
+  opacity: 0;
+  z-index: -999;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.RightFadeOut {
+  opacity: 0;
+  z-index: -999;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+}
+
+.TopFadeOut {
+  opacity: 0;
+  z-index: -999;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
+.BottomFadeOut {
+  opacity: 0;
+  z-index: -999;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.PageAniOn {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+  z-index: 999;
+}
+
+.PageAniOff {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  opacity: 0;
+  z-index: -999;
 }
 
 .LoadingSec {
@@ -227,8 +297,8 @@ table {
   position: absolute;
   top: 10%;
   left: 50%;
-  width: 600px;
-  height: 300px;
+  width: 60rem;
+  height: 30rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 88;
@@ -240,38 +310,123 @@ table {
   top: 75%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 200rem;
+  width: 140rem;
+  height: 140rem;
   opacity: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-.UnderMain {
-  display: none;
-  opacity: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  white-space: nowrap;
-  top: 0%;
-  width: 300% !important;
+#Sec1 .inner .ctnr2 svg, #Sec2 .inner .ctnr2 svg {
+  position: absolute;
 }
 
-.UnderMain .slide {
+.arrowRight {
+  all: unset;
+  position: fixed;
+  right: -1%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1002;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.arrow {
+  all: unset;
+  position: fixed;
+  right: -1%;
+  top: 50%;
+  width: 20rem;
+  height: 20rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1001;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.Boom {
+  all: unset;
+  position: fixed;
+  right: -1%;
+  top: 50%;
+  width: 40rem;
+  height: 40rem;
+  -webkit-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
+  z-index: 1000;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.arrowLeft {
+  all: unset;
+  position: fixed;
+  left: 4%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1002;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.Leftarrow {
+  all: unset;
+  position: fixed;
+  left: -1%;
+  top: 50%;
+  width: 20rem;
+  height: 20rem;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  z-index: 1001;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.LeftBoom {
+  all: unset;
+  position: fixed;
+  left: -1%;
+  top: 50%;
+  width: 40rem;
+  height: 40rem;
+  -webkit-transform: translate(25%, 50%);
+          transform: translate(25%, 50%);
+  z-index: 1000;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.UnderMain {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  left: 0px;
+  top: 0px;
+  display: none;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  opacity: 0;
+  -webkit-transition: all 1s !important;
+  transition: all 1s !important;
+  white-space: nowrap;
+}
+
+.UnderMain #Sec1,
+.UnderMain #Sec2 {
+  width: 100vw;
 }
 
 .UnderMain #Sec1 .inner,
@@ -312,6 +467,7 @@ table {
   position: absolute;
   bottom: 10%;
   right: 50%;
+  width: 100% !important;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -327,6 +483,7 @@ html {
 
 html body {
   background-color: #ececec;
+  overflow: hidden;
 }
 
 html body .screen {

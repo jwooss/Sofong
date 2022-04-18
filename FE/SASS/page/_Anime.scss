@@ -1,0 +1,52 @@
+.LeftFadeIn{
+    opacity: 1;
+    z-index: 999;
+    transform: translateX(0px);
+}
+.RightFadeIn{
+    opacity: 1;
+    z-index: 999;
+    transform: translateX(0px);
+}
+.TopFadeIn{
+    opacity: 1;
+    z-index: 999;
+    transform: translateY(0px);
+}
+.BottomFadeIn{
+    opacity: 1;
+    z-index: 999;
+    transform: translateY(0px);
+}
+
+.LeftFadeOut{
+    opacity: 0;
+    z-index: -999;
+    transform: translateX(-60px);
+}
+.RightFadeOut{
+    opacity: 0;
+    z-index: -999;
+    transform: translateX(60px);
+}
+.TopFadeOut{
+    opacity: 0;
+    z-index: -999;
+    transform: translateY(-60px);
+}
+.BottomFadeOut{
+    opacity: 0;
+    z-index: -999;
+    transform: translateY(60px);
+}
+
+.PageAniOn{
+    transform: translateX(0px);
+    opacity: 1;
+    z-index: 999;
+}
+.PageAniOff{
+    transform: translateX(40px);
+    opacity: 0;
+    z-index: -999;
+}

@@ -57,10 +57,10 @@ Foldering -
  ┃ ┣📁IMG
  ┃ ┃ ┣📁favicon
  ┃ ┃ ┃ ┗⭐️favicon.ico
- ┃ ┃ ┣📷arrow.png
- ┃ ┃ ┣📷Intro1.png
- ┃ ┃ ┣📷Intro2.png
- ┃ ┃ ┗📷preview.png
+ ┃ ┃ ┣🖼arrow.png
+ ┃ ┃ ┣🖼Intro1.png
+ ┃ ┃ ┣🖼Intro2.png
+ ┃ ┃ ┗🖼preview.png
  ┃ ┣📁JS
  ┃ ┃ ┣📁compeonents
  ┃ ┃ ┃ ┣📝animation.js

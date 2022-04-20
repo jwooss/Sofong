@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,7 +55,7 @@ table {
 .btn {
   all: unset;
   position: relative;
-  font-size: 6rem;
+  font-size: 5.2rem;
   font-family: "Poor Story", cursive;
   letter-spacing: -2px;
   word-spacing: 2px;
@@ -73,6 +69,29 @@ table {
 }
 
 .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: white;
+  text-shadow: 0px 0px 6px #333;
+}
+
+.Surbtn {
+  all: unset;
+  position: relative;
+  font-size: 5.2rem;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 5px white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.Surbtn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: white;
@@ -96,7 +115,7 @@ table {
 
 .introTitle {
   all: unset;
-  font-size: 5rem;
+  font-size: 6rem;
   color: #333;
   font-family: "Poor Story", cursive;
   letter-spacing: -2px;
@@ -108,60 +127,66 @@ table {
   line-height: 160%;
 }
 
+.qusTitle {
+  all: unset;
+  font-size: 6rem;
+  color: #333;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 2px #333;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: bold;
+  line-height: 120%;
+}
+
 .LeftFadeIn {
   opacity: 1;
-  z-index: 999;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
 
 .RightFadeIn {
   opacity: 1;
-  z-index: 999;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
 
 .TopFadeIn {
   opacity: 1;
-  z-index: 999;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
 .BottomFadeIn {
   opacity: 1;
-  z-index: 999;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
 .LeftFadeOut {
   opacity: 0;
-  z-index: -999;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 
 .RightFadeOut {
   opacity: 0;
-  z-index: -999;
-  -webkit-transform: translateX(60px);
-          transform: translateX(60px);
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
 .TopFadeOut {
   opacity: 0;
-  z-index: -999;
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .BottomFadeOut {
   opacity: 0;
-  z-index: -999;
-  -webkit-transform: translateY(60px);
-          transform: translateY(60px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .PageAniOn {
@@ -172,8 +197,8 @@ table {
 }
 
 .PageAniOff {
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
   opacity: 0;
   z-index: -999;
 }
@@ -260,6 +285,43 @@ table {
             transform: translateY(-100%);
     z-index: 999;
   }
+}
+
+.back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.flipBack {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.TopBack {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 #Sec1, #Sec2 {
@@ -367,7 +429,7 @@ table {
 .arrowLeft {
   all: unset;
   position: fixed;
-  left: 4%;
+  right: 89%;
   top: 50%;
   width: 10rem;
   height: 10rem;
@@ -382,7 +444,7 @@ table {
 .Leftarrow {
   all: unset;
   position: fixed;
-  left: -1%;
+  right: 89%;
   top: 50%;
   width: 20rem;
   height: 20rem;
@@ -396,12 +458,12 @@ table {
 .LeftBoom {
   all: unset;
   position: fixed;
-  left: -1%;
+  right: 89%;
   top: 50%;
   width: 40rem;
   height: 40rem;
-  -webkit-transform: translate(25%, 50%);
-          transform: translate(25%, 50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 1000;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -439,6 +501,16 @@ table {
       grid-template-rows: 1fr;
 }
 
+.UnderMain #Sec1 .inner .back,
+.UnderMain #Sec2 .inner .back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .UnderMain #Sec1 .inner div,
 .UnderMain #Sec2 .inner div {
   position: relative;
@@ -462,12 +534,24 @@ table {
   text-align: right;
 }
 
+.UnderMain #Sec1 .inner div .center,
+.UnderMain #Sec2 .inner div .center {
+  position: absolute;
+  right: 50%;
+  top: 10%;
+  text-align: right;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .UnderMain #Sec1 .inner div .Bottom,
 .UnderMain #Sec2 .inner div .Bottom {
   position: absolute;
   bottom: 10%;
   right: 50%;
   width: 100% !important;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -476,9 +560,183 @@ table {
   background-color: #F3F3F3;
 }
 
+.Section4 .inner {
+  -ms-grid-columns: 1fr !important;
+      grid-template-columns: 1fr !important;
+  -ms-grid-rows: (1fr)[2] !important;
+      grid-template-rows: repeat(2, 1fr) !important;
+}
+
+.Section4 .inner .right .LottieRotate {
+  position: absolute;
+  display: block;
+  width: 28rem;
+  height: 14rem;
+  left: 50%;
+  bottom: 68%;
+  -webkit-transform: translateX(-50%) scale(6);
+          transform: translateX(-50%) scale(6);
+}
+
+.Section4 .inner .right .LottieRotate2 {
+  position: absolute;
+  display: block;
+  width: 28rem;
+  height: 28rem;
+  cursor: pointer;
+  left: 50%;
+  bottom: 12%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.Section4 .inner .right .Dot {
+  position: absolute;
+  display: block;
+  width: 0rem;
+  height: 0rem;
+  left: 50%;
+  bottom: 80%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #FF6868;
+  border-radius: 50%;
+  -webkit-transition: all 1.4s ease-in-out;
+  transition: all 1.4s ease-in-out;
+}
+
+.Survey {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: -1004;
+  opacity: 0;
+}
+
+.Survey .progressBar {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  width: 50%;
+  height: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1005;
+}
+
+.Survey .progressBar li {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 2px 2px 3px #888;
+          box-shadow: inset 2px 2px 3px #888;
+  -webkit-transition: all .75s;
+  transition: all .75s;
+}
+
+.Survey .progressBar li:nth-child(1) {
+  background: -webkit-gradient(linear, left top, right top, from(#0984e3), to(#81ecec));
+  background: linear-gradient(to right, #0984e3, #81ecec);
+}
+
+.Survey .Section {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.Survey .Section .inner {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 120px 0px 60px 0px;
+}
+
+.Survey .Section .inner .back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100% !important;
+}
+
+.Survey .Section .inner .top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Survey .Section .inner .top lottie-player {
+  position: absolute;
+  left: -46%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(2.4);
+          transform: translateY(-50%) scale(2.4);
+}
+
+.Survey .Section .inner .top h1 {
+  margin-left: 14rem;
+}
+
+.Survey .Section .inner .middle {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  row-gap: 10rem;
+  width: 80%;
+  padding: 10rem 0px;
+  margin: 10rem auto;
+}
+
+.Survey .Section .inner .bottom {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html body {

@@ -3,6 +3,10 @@
 const LottieCntr = document.querySelector(".ctnr");
 const LottieCntr2 = document.querySelector(".ctnr2");
 const arrowRightBoom = document.querySelector('.Boom');
+const arrowLeftBoom = document.querySelector('.LeftBoom');
+const tenthLottie = document.querySelector('#tenthLottie');
+const LottieRotate = document.querySelector('.LottieRotate');
+const LottieRotate2 = document.querySelector('.LottieRotate2');
 
 // Lottie 관련 함수
 
@@ -30,23 +34,55 @@ let animationSkipForward3 = bodymovin.loadAnimation({
     path: "https://assets1.lottiefiles.com/packages/lf20_fiqbbdsz.json"
 });
 
-LottieInteractivity.create({
-    player: '#chainLoadPlayer',
-    mode: 'chain',
-    actions: [
-    {
-        state: 'click',
-        transition: 'click'
-    },
-    {
-        state: 'autoplay',
-        transition: 'onComplete',
-        path: 'https://assets1.lottiefiles.com/packages/lf20_fiqbbdsz.json',
-        reset: true
-    }
-    ]
+let animationSkipForward4 = bodymovin.loadAnimation({
+    container: arrowLeftBoom,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://assets1.lottiefiles.com/packages/lf20_fiqbbdsz.json"
 });
 
+let animationSkipForward5 = bodymovin.loadAnimation({
+    container: tenthLottie,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://assets6.lottiefiles.com/packages/lf20_7m0szdkq.json"
+});
+
+let animationSkipForward6 = bodymovin.loadAnimation({
+    container: LottieRotate,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://assets7.lottiefiles.com/packages/lf20_fk1ypisi.json"
+});
+
+let animationSkipForward7 = bodymovin.loadAnimation({
+    container: LottieRotate2,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://assets7.lottiefiles.com/packages/lf20_yDnFTL.json"
+});
+
+
+// LottieInteractivity.create({
+//     player: '#chainLoadPlayer',
+//     mode: 'chain',
+//     actions: [
+//     {
+//         state: 'click',
+//         transition: 'click'
+//     },
+//     {
+//         state: 'autoplay',
+//         transition: 'onComplete',
+//         path: 'https://assets7.lottiefiles.com/packages/lf20_fk1ypisi.json',
+//         reset: true
+//     }
+//     ]
+// });
 
 
 // 버튼 Lottie 이벤트 함수
@@ -60,4 +96,16 @@ export function AniStart2(){
 }
 export function AniStart3(){
     animationSkipForward3.playSegments([0, 60], true);
+}
+export function AniStart4(){
+    animationSkipForward4.playSegments([0, 60], true);
+}
+export function AniStart5(){
+    animationSkipForward5.playSegments([0, 60], true);
+}
+export function AniStart6(){
+    animationSkipForward6.playSegments([0, 60], true);
+}
+export function AniStart7(){
+    animationSkipForward7.playSegments([50, 60], true);
 }

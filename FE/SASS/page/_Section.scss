@@ -1,9 +1,41 @@
 
+    .back{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        transition: all .5s;
+    }
+    .flipBack{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        transform: rotate(180deg);
+        transition: all .5s;
+    }
+    .TopBack{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        transform: rotate(90deg);
+        transition: all .5s;
+    }
+
+
 #Sec1, #Sec2 {
     position: relative;
     width: 100%;
     background-color: $MainColor1;
     transition: all .5s;
+    // overflow: hidden;
 
     .inner{
         position: relative;
@@ -79,7 +111,7 @@
 .arrowLeft{
     all: unset;
     position: fixed;
-    left: 4%;
+    right: 89%;
     top: 50%;
     width: 10rem;
     height: 10rem;
@@ -91,7 +123,7 @@
 .Leftarrow{
     all: unset;
     position: fixed;
-    left: -1%;
+    right: 89%;
     top: 50%;
     width: 20rem;
     height: 20rem;
@@ -102,11 +134,11 @@
 .LeftBoom{
     all: unset;
     position: fixed;
-    left: -1%;
+    right: 89%;
     top: 50%;
     width: 40rem;
     height: 40rem;
-    transform: translate(25%, 50%);
+    transform: translate(-50%, -50%);
     z-index: 1000;
     transition: all .5s;
 }
@@ -129,6 +161,14 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr;
+            .back{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
             div{
                 position: relative;
                 width: 100%;
@@ -145,12 +185,19 @@
                     top: 10%;
                     text-align: right;
                 }
-
+                .center{
+                    position: absolute;
+                    right: 50%;
+                    top: 10%;
+                    text-align: right;
+                    transform: translateX(-50%);
+                }
                 .Bottom{
                     position: absolute;
                     bottom: 10%;
                     right: 50%;
                     width: 100% !important;
+                    transition: all .5s;
                     transform: translateX(50%);
                 }
             }
@@ -160,7 +207,139 @@
 
 #Sec2{background-color: $MainColor2;};
 
+.Section4{
+    .inner{
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+        .right{
+            .LottieRotate{
+                position: absolute;
+                display: block;
+                width: 28rem;
+                height: 14rem;
+                left: 50%;
+                bottom: 68%;
+                transform: translateX(-50%) scale(6);
+            }
+            .LottieRotate2{
+                position: absolute;
+                display: block;
+                width: 28rem;
+                height: 28rem;
+                cursor: pointer;
+                left: 50%;
+                bottom: 12%;
+                transform: translateX(-50%);
+            }
+            .Dot{
+                position: absolute;
+                display: block;
+                width: 0rem;
+                height: 0rem;
+                left: 50%;
+                bottom: 80%;
+                transform: translateX(-50%);
+                background-color: #FF6868;
+                border-radius: 50%;
+                transition: all 1.4s ease-in-out;
+            }
+        }
+    }
+}
 
+.Survey{
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    z-index: -1004;
+    opacity: 0;
+    
+    .progressBar{
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 8px;
+        width: 50%;
+        height: 10px;
+        transform: translateX(-50%);
+        z-index: 1005;
+        li{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 3px #888;
+            transition: all .75s;
+            &:nth-child(1){
+                background: linear-gradient(to right, #0984e3, #81ecec);
+            }
+        }
+    }
+    .Section{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        .inner{
+            position: relative;
+            max-width: 1280px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 120px 0px 60px 0px;
+            // background: url;
+            .back{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100% !important;
+            }
+            .top{
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                lottie-player{
+                    position: absolute;
+                    left: -46%;
+                    top: 50%;
+                    transform: translateY(-50%) scale(2.4);
+                }
+                h1{
+                    margin-left: 14rem;
+                }
+            }
+            .middle{
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                place-items: center;
+                row-gap: 10rem;
+                width: 80%;
+                padding: 10rem 0px;
+                margin: 10rem auto;
+            }
+            .bottom{
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                lottie-player{
+                    
+                }
+            }
+        }
+    }
+}
 // #Spe1{
 //     img{
 //         position: absolute;

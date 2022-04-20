@@ -1,5 +1,5 @@
 // Import
-import { AniStart, AniStart2, AniStart3 } from "./animation.js";
+import { AniStart, AniStart2, AniStart3, AniStart4, AniStart5, AniStart6, AniStart7 } from "./animation.js";
 
 // 페이지 관련 동적 효과
 
@@ -27,9 +27,37 @@ const arrowRight = document.querySelector(".arrowRight");
 const arrowRightLottie = document.querySelector('.arrow');
 const arrowRightBoom = document.querySelector('.Boom');
 
-let ArrowPageCount = 0;
+const LottieRotate = document.querySelector('.LottieRotate2');
+const Dot = document.querySelector('.Dot');
+const body = document.querySelector('body');
+let ArrowPageCount = 1;
+
+// Survey
+const Survey = document.querySelector('.Survey');
+
 // const slider = document.querySelector('.slide');
 // const Section2 = document.querySelector('.Section2');
+
+// resize 위치 조정
+
+window.addEventListener('resize', function() {
+    if(ArrowPageCount == 1){
+        scrollTo({
+            left: this.window.innerWidth * 0,
+            behavior: "smooth",
+        });
+    }else if(ArrowPageCount == 2){
+        scrollTo({
+            left: this.window.innerWidth * 1,
+            behavior: "smooth",
+        });
+    }else{
+        scrollTo({
+            left: this.window.innerWidth + 1920 ,
+            behavior: "smooth",
+        });
+    }   
+}, true);
 
 // Loading 관련 함수
 const RandomSpan = () => {
@@ -63,10 +91,34 @@ StartBTN.addEventListener('click', () => {
 
     setTimeout(() => {
         UnderMain.style.opacity = '1';
+        PageAni('On', 0);
+    }, 200);
+})
+
+LottieRotate.addEventListener('click', (e) => {
+    AniStart6();
+    AniStart7();
+    setTimeout(() => {
+        Dot.style.width = '10rem';
+        Dot.style.height = '10rem';
+        Dot.style.transform = 'scale(100)';
+        PageAni('Off', 0);
+        PageAni('Off', 1);
+        ArrowStatus('Left', 'Close');
         setTimeout(() => {
-            PageAni('On', 0);
-        }, 300);
-    }, 500);
+            PageAni('Off', 2);
+            PageAni('Off', 1);
+            PageAni('Off', 0);
+            Survey.style.display = 'block';
+            setTimeout(() => {
+                UnderMain.style.display = 'none';
+                Survey.style.zIndex = '1200';
+                Survey.style.opacity = '1';
+            }, 1000);
+            body.style.overflow = 'unset';
+            body.style.overflowX = 'hidden';
+        }, 1000);
+    }, 1400);
 })
 
 // Intro 페이지 애니메이션 함수
@@ -76,26 +128,33 @@ const PageAni = (Swi, Num) => {
         Intros[Num].classList.remove('PageAniOff');
         Intros[Num].classList.add('PageAniOn');
 
-        const im1 = Intros[Num].querySelector('.introTitle');
-        im1.classList.remove('LeftFadeOut');
-        im1.classList.add('LeftFadeIn');
-
-        const im2 = Intros[Num].querySelector('.Bottom');
-        im2.classList.remove('RightFadeOut');
-        im2.classList.add('RightFadeIn');
+        setTimeout(() => {
+            const im1 = Intros[Num].querySelector('.introTitle');
+            im1.classList.remove('LeftFadeOut');
+            im1.classList.add('LeftFadeIn');
+    
+            const im2 = Intros[Num].querySelectorAll('.Bottom');
+            im2.forEach(ele => {
+                ele.classList.remove('RightFadeOut');
+                ele.classList.add('RightFadeIn');
+            })
+        }, 460);
         
     }else if(Swi == 'Off'){
-        console.log('asd');
         Intros[Num].classList.remove('PageAniOn');
         Intros[Num].classList.add('PageAniOff');
 
-        const im1 = Intros[Num].querySelector('.introTitle');
-        im1.classList.remove('LeftFadeIn');
-        im1.classList.add('LeftFadeOut');
-
-        const im2 = Intros[Num].querySelector('.Bottom');
-        im2.classList.remove('RightFadeIn');
-        im2.classList.add('RightFadeOut');
+        setTimeout(() => {
+            const im1 = Intros[Num].querySelector('.introTitle');
+            im1.classList.remove('LeftFadeIn');
+            im1.classList.add('LeftFadeOut');
+    
+            const im2 = Intros[Num].querySelectorAll('.Bottom');
+            im2.forEach(ele => {
+                ele.classList.remove('RightFadeOut');
+                ele.classList.add('RightFadeIn');
+            })
+        }, 700);
     }else{
         console.log('잘못 넣음');
     }
@@ -110,25 +169,29 @@ const ArrowStatus = (Dis, Sta) => {
             arrowLeftLottie.style.display = 'block';
             arrowLeftBoom.style.display = 'block';
 
-            arrowLeft.style.opacity = '1';
-            arrowLeftLottie.style.opacity = '1';
-            arrowLeftBoom.style.opacity = '1';
-
             arrowLeft.style.zIndex = '1002';
             arrowLeftLottie.style.zIndex = '1001';
             arrowLeftBoom.style.zIndex = '1000';
-        }else if(Sta == 'Close'){
-            arrowLeft.style.display = 'none';
-            arrowLeftLottie.style.display = 'none';
-            arrowLeftBoom.style.display = 'none';
 
+            setTimeout(() => {
+                arrowLeft.style.opacity = '1';
+                arrowLeftLottie.style.opacity = '1';
+                arrowLeftBoom.style.opacity = '1';
+            }, 500);
+        }else if(Sta == 'Close'){
             arrowLeft.style.opacity = '0';
             arrowLeftLottie.style.opacity = '0';
             arrowLeftBoom.style.opacity = '0';
 
-            arrowLeft.style.zIndex = '-199';
-            arrowLeftLottie.style.zIndex = '-199';
-            arrowLeftBoom.style.zIndex = '-199';
+            setTimeout(() => {
+                arrowLeft.style.zIndex = '-199';
+                arrowLeftLottie.style.zIndex = '-199';
+                arrowLeftBoom.style.zIndex = '-199';
+    
+                arrowLeft.style.display = 'none';
+                arrowLeftLottie.style.display = 'none';
+                arrowLeftBoom.style.display = 'none';
+            }, 500);
         }else{
             alert('잠좀 깨자1.');
         }
@@ -138,25 +201,29 @@ const ArrowStatus = (Dis, Sta) => {
             arrowRightLottie.style.display = 'block';
             arrowRightBoom.style.display = 'block';
 
-            arrowRight.style.opacity = '1';
-            arrowRightLottie.style.opacity = '1';
-            arrowRightBoom.style.opacity = '1';
-
             arrowRight.style.zIndex = '1002';
             arrowRightLottie.style.zIndex = '1001';
             arrowRightBoom.style.zIndex = '1000';
-        }else if(Sta == 'Close'){
-            arrowRight.style.display = 'none';
-            arrowRightLottie.style.display = 'none';
-            arrowRightBoom.style.display = 'none';
 
+            setTimeout(() => {
+                arrowRight.style.opacity = '1';
+                arrowRightLottie.style.opacity = '1';
+                arrowRightBoom.style.opacity = '1';
+            }, 500);
+        }else if(Sta == 'Close'){
             arrowRight.style.opacity = '0';
             arrowRightLottie.style.opacity = '0';
             arrowRightBoom.style.opacity = '0';
 
-            arrowRight.style.zIndex = '-199';
-            arrowRightLottie.style.zIndex = '-199';
-            arrowRightBoom.style.zIndex = '-199';
+            setTimeout(() => {
+                arrowRight.style.zIndex = '-199';
+                arrowRightLottie.style.zIndex = '-199';
+                arrowRightBoom.style.zIndex = '-199';
+    
+                arrowRight.style.display = 'none';
+                arrowRightLottie.style.display = 'none';
+                arrowRightBoom.style.display = 'none';
+            }, 500);
         }else{
             alert('잠좀 깨자2.');
         }
@@ -165,57 +232,107 @@ const ArrowStatus = (Dis, Sta) => {
     }
 }
 
-if(ArrowPageCount == 0){
-    arrowRight.addEventListener('click', (e) => {
-        AniStart3();
-    
-        const WidthWindow = window.innerWidth;
-        PageAni('On', 1);
-        PageAni('Off', 0);
-        
-        ArrowStatus('Left', 'Close');
-        ArrowStatus('Left', 'Open');
-        ArrowStatus('Right', 'Open');
+// PageAni('On', 0);
+// PageAni('Off', 1);
 
-        scrollTo({
-            left: WidthWindow * ArrowPageCount,
-            behavior: "smooth",
-        });
-        ArrowPageCount++;
-    })
-}else if(ArrowPageCount == 1){
-    arrowRight.addEventListener('click', (e) => {
-        AniStart3();
-    
-        const WidthWindow = window.innerWidth;
-        PageAni('On', 1);
-        PageAni('Off', 0);
-        
-        ArrowStatus('Left', 'Open');
-        ArrowStatus('Right', 'Open');
+ArrowStatus('Left', 'Close');
+ArrowStatus('Right', 'Open');
 
-        scrollTo({
-            left: WidthWindow * ArrowPageCount,
-            behavior: "smooth",
-        });
-        ArrowPageCount++;
-    })
-}else if(ArrowPageCount == 2){
-    arrowRight.addEventListener('click', (e) => {
-        AniStart3();
+arrowRight.addEventListener('click', (e) => {
+    RightScroll();
+})
+arrowLeft.addEventListener('click', (e) => {
+    LeftScroll();
+})
+
+
+function RightScroll(){
+    if(ArrowPageCount == 1){
+        AniStart5();
+        setTimeout(() => {
+            
+            PageAni('On', 1);
+            PageAni('Off', 0);
+            PageAni('Off', 2);
+            
+            ArrowStatus('Left', 'Open');
+            ArrowStatus('Right', 'Open');
+        
+            AniStart3();
+            
+            const WidthWindow = window.innerWidth;
+        
+            scrollTo({
+                left: WidthWindow * (ArrowPageCount),
+                behavior: "smooth",
+            });
+
+            setTimeout(() => {
+                ArrowPageCount++;
+            }, 500);
+        }, 2000);
+    }
     
-        const WidthWindow = window.innerWidth;
+    if(ArrowPageCount == 2){
         PageAni('On', 2);
         PageAni('Off', 1);
+    
+        ArrowStatus('Left', 'Open');
+        ArrowStatus('Right', 'Close');
+
+        AniStart3();
+    
+        const WidthWindow = window.innerWidth;
 
         scrollTo({
             left: WidthWindow * ArrowPageCount,
             behavior: "smooth",
         });
-        ArrowPageCount++;
-    })
+
+        setTimeout(() => {
+            ArrowPageCount++;
+        }, 500);
+    }
 }
 
+function LeftScroll(){
+    if(ArrowPageCount == 2){
+        PageAni('On', 0);
+        PageAni('Off', 1);
+    
+        ArrowStatus('Left', 'Close');
+        ArrowStatus('Right', 'Open');
+
+        AniStart4();
+    
+        const WidthWindow = window.innerWidth;
+
+        scrollTo({
+            left: WidthWindow * ArrowPageCount - WidthWindow * 2,
+            behavior: "smooth",
+        });
+
+        ArrowPageCount--
+    }    
+    if(ArrowPageCount == 3){
+        PageAni('On', 1);
+        PageAni('Off', 2);
+        
+        ArrowStatus('Left', 'Open');
+        ArrowStatus('Right', 'Open');
+    
+        AniStart4();
+        
+        const WidthWindow = window.innerWidth;
+    
+        scrollTo({
+            left: WidthWindow * ArrowPageCount - WidthWindow * 2,
+            behavior: "smooth",
+        });
+
+        ArrowPageCount--;
+    }
+}
 
 // HorizontalScroll();
 

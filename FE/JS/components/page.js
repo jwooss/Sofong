@@ -32,6 +32,8 @@ const Dot = document.querySelector('.Dot');
 const body = document.querySelector('body');
 let ArrowPageCount = 1;
 
+const ctnr = document.querySelector('#Title .ctnr')
+
 // Survey
 const Survey = document.querySelector('.Survey');
 
@@ -73,12 +75,12 @@ RandomSpan();
 setTimeout(() => {
     Loading()
     Screen.style.display = 'block';   
-}, 500);
+}, 1000);
 
 setTimeout(() => {
     Screen.style.opacity = '1';
-    AniStart();     
-}, 1000);
+    AniStart(ctnr);     
+}, 1600);
 
 StartBTN.addEventListener('click', () => {
     Main.classList.add('Ani');    
@@ -114,7 +116,7 @@ LottieRotate.addEventListener('click', (e) => {
                 UnderMain.style.display = 'none';
                 Survey.style.zIndex = '1200';
                 Survey.style.opacity = '1';
-            }, 1000);
+            }, 500);
             body.style.overflow = 'unset';
             body.style.overflowX = 'hidden';
         }, 1000);
@@ -333,58 +335,3 @@ function LeftScroll(){
         ArrowPageCount--;
     }
 }
-
-// HorizontalScroll();
-
-// const HorizontalScroll = () => {
-//     let s_move_max = (Section2.offsetWidth * 3 - window.innerWidth) * -1;
-//     let s_pos = 0;
-
-//     cont_2.addEventListener('wheel',function(e){
-//         e.preventDefault;
-//         // const clientWidth = window.innerWidth;
-//         // const Left = Intros[Intros.length - 1].getBoundingClientRect().left
-
-//         s_pos -= e.deltaY;
-
-//         if(s_pos < s_move_max){
-//             s_pos = s_move_max;
-//         }else if(s_pos > 0){
-//             s_pos = 0;
-//         }
-//     });
-// }
-
-// if(e.deltaY > 0){
-//     // 하향
-//     scrollDown(Intros, clientWidth, Left, e, s_pos)
-
-// }else if(e.deltaY < 0){
-//     // 상향
-//     scrollUp(Intros, clientWidth, Left, e, s_pos);
-// }
-
-// console.log(s_pos, s_move_max); 
-
-// const scrollDown = (Intro, ClientWidth, Left, E, S) => {
-//     for(let i = 1; i < Intro.length; i++){          
-//         if(ClientWidth * (Intros.length - i) === Left){
-//             scrollTo({
-//                 left: ClientWidth * i - E.deltaY + S,
-//                 behavior: "smooth",
-//             });
-//         }
-//     }
-// }
-
-// const scrollUp = (Intro, ClientWidth, Left, E, S) => {
-
-//     for(let i = 0; i < Intro.length; i++){            
-//         if(ClientWidth * (Intros.length - i) === Left){
-//             scrollTo({
-//                 left: ClientWidth * (Intro.length - 2 - i) + E.deltaY,
-//                 behavior: "smooth",
-//             });
-//         }
-//     }
-// }

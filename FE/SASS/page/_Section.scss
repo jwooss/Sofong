@@ -344,7 +344,7 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-                height: 40rem;
+                height: 43rem;
                 overflow: hidden;
                 lottie-player{
                     position: absolute;
@@ -411,6 +411,12 @@
         }
     }
 }
+
+// body{
+//     overflow-x: hidden !important;
+//     overflow-y: scroll !important;
+// }
+
 .Result{
     display: none;
     opacity: 0;
@@ -520,6 +526,7 @@
             right: -22%;
             bottom: -14%;
             border-radius: 50%;
+            cursor: pointer;
             .arrow{
                 position: absolute;
                 left: -60%;
@@ -531,6 +538,37 @@
                 height: 300px;
             }
         }
+    }
+}
+
+.MailForm{
+    // z-index: 9999;
+    display: none;
+    opacity: 0;
+    z-index: -9999;
+    &::before{
+        content: '';
+        position: fixed;
+        @include FlexCenter();
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.75);
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+    }
+    form{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60rem;
+        height: 40rem;
+        background-color: white;
+        border-radius: 2rem;
+        padding: 2rem;
+        z-index: 9999;
     }
 }
 

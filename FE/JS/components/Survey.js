@@ -1,11 +1,12 @@
-
-import { AniStart, AniStart8, AniStart9 } from "./animation.js";
+import { AniStart,  AniStart9 } from "./animation.js";
 
 const SurveyPages = document.querySelectorAll(".Survey .Section .inner");
 const ProgressBarCnt = document.querySelectorAll('.progressBar li');
 const ResultLoading = document.querySelector('.ResultLoading');
+const Result = document.querySelector(".Result");
 const Mailbox = document.querySelector('.FeedbackMailbox');
-const FeedLottie = document.querySelector(".FeedbackMailbox lottie-player");
+const FeedB = document.querySelector(".Feedback");
+const body = document.querySelector('body');
 
 let Inner1BtnsCnt = 0;
 let PageCnt = 0;
@@ -19,20 +20,18 @@ SurveyPages.forEach(elee => {
                 let cntrdiv = document.createElement('div');
                 cntrdiv.classList.add('ctnr');
                 e.target.append(cntrdiv);
-
-                AniStart();
+            
+                AniStart(e.target.childNodes[1]);
 
                 ele.classList.add('ActiveSurbtn');
                 Inner1BtnsCnt = 1;
-                PageCnt++;
 
+                PageCnt++;
                 PageCountFunc();
 
                 setTimeout(() => {
                     e.target.childNodes[1].remove();
                 }, 1600);
-
-                console.log(PageCnt);
             } else if (Inner1BtnsCnt == 1) { }
         })
     });
@@ -60,7 +59,19 @@ function PageOn() {
                     setTimeout(() => {
                         ele.style.display = 'none';
                         ResultLoading.style.opacity = '1'
-                        AniStart8();
+                        window.scrollTo( 0, 0 );
+                        body.style.overflow = 'hidden';
+                        setTimeout(() => {
+                            ResultLoading.style.opacity = '0'
+                            Result.style.zIndex = '1000';
+                            Result.style.display = 'block';
+                            setTimeout(() => {
+                                Result.style.opacity = '1';
+                                ResultLoading.style.zIndex = '-1000';
+                                ResultLoading.style.display = 'none';
+                                body.style.overflowY = 'scroll';
+                            }, 1000);
+                        }, 1400);
                     }, 500);
                 })
             }, 600);
@@ -78,7 +89,6 @@ function PageOn() {
             }, 1600);
         }
     }
-
 }
 
 function PrevPageOff() {
@@ -90,13 +100,12 @@ function PrevPageOff() {
     }, 1000);
 }
 
-setTimeout(() => {
-    AniStart8();
-}, 1000);
+function OpenMainForm(){
 
-// Mailbox.addEventListener('click', (e) => {
-//     AniStart9();
-// })
+}
 
-// Django 전 까지 임시 기능
+FeedB.addEventListener('click', (e) => {
+    AniStart9();
+    OpenMainForm();
+})
 

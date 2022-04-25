@@ -41,6 +41,7 @@
     <!-- 스타일, 스크립트 -->
     <link rel="stylesheet" href="SASS/style.css">
     <script type="module" src="JS/components/page.js" defer></script>
+    <script type="module" src="JS/components/Survey.js"></script>
     <script type="module" src="JS/components/animation.js" defer></script>
 </head>
 <body>
@@ -54,6 +55,7 @@
     <!-- 메인 스크린 -->
     <div class="screen">
         <div class="section1 Main" id="Sec1">
+            <lottie-player class="MainBouble" src="JS/JSON/lf30_editor_evsrsiij.json"  background="transparent"  speed=".5"  loop  autoplay></lottie-player>
             <div class="inner">
                 <h1 class="Title" id="Title">Sofong</h1>
                 <div class="ctnr"></div>
@@ -113,25 +115,37 @@
             <ul class="progressBar">
                 <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
             </ul>
             <div class="Section">
-                <div class="inner">
-                    <img class="back" src="IMG/SuveyBack.jpg" alt="Background Paper">
+                <div class="inner" id="inner1" style="--j: 10">
                     <div class="top">
                         <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_uwgc7u8d.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
-                        <h1 class="qusTitle">당신의 현재 어떤 단어가 더 가깝나요?</h1>
+                        <h1 class="qusTitle">make a type specimen book. It has survived not only five centu?</h1>
                     </div>
                     <ul class="middle">
-                        <li class="Surbtn">유부초밥</li>
-                        <li class="Surbtn">연어초밥</li>
-                        <li class="Surbtn">계란초밥</li>
-                        <li class="Surbtn">참치초밥</li>
-                        <li class="Surbtn">광어초밥</li>
-                        <li class="Surbtn">등어초밥</li>
+                        <li class="Surbtn">ext of the pr</li>
+                        <li class="Surbtn">inting and typesetting </li>
+                        <li class="Surbtn">industry.  been the </li>
+                        <li class="Surbtn">Lorem Ipsum has</li>
+                        <li class="Surbtn">Lorem Ipsum is</li>
+                        <li class="Surbtn"> simply dummy t</li>
+                    </ul>
+                    <div class="bottom">
+                        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_twwb0ekk.json" style="width: 100%; "  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+                    </div>
+                </div>
+                <div class="inner" id="inner2" style="--j: 9">
+                    <div class="top">
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_uwgc7u8d.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+                        <h1 class="qusTitle">make a type specimen book. 1It has survived not only five centu?</h1>
+                    </div>
+                    <ul class="middle">
+                        <li class="Surbtn">ext of the pr1</li>
+                        <li class="Surbtn">inting and typesetting 1</li>
+                        <li class="Surbtn">industry.  been the 1</li>
+                        <li class="Surbtn">Lorem Ipsum has1</li>
+                        <li class="Surbtn">Lorem Ipsum is1</li>
+                        <li class="Surbtn"> simply dummy t1</li>
                     </ul>
                     <div class="bottom">
                         <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_twwb0ekk.json" style="width: 100%; "  background="transparent"  speed="1"  loop  autoplay></lottie-player>
@@ -139,6 +153,78 @@
                 </div>
             </div>
         </div>
+        <div class="ResultLoading">
+            <!-- 결과 로딩 페이지 -->
+            <div class="ReLoading">
+                <ul class="Sofong">
+                    <li style="--k: 0">S</li>
+                    <li style="--k: 1">O</li>
+                    <li style="--k: 2">F</li>
+                    <li style="--k: 3">O</li>
+                    <li style="--k: 4">N</li>
+                    <li style="--k: 5">G</li>
+                </ul>
+                <div class="ReLottie">
+
+                </div>
+            </div>
+        </div>
+        <div class="Result">
+            <div class="ReResult">
+                <div class="Title">Sofong</div>
+                <span>음.. 당신에겐 이런 노래가 좋겠군요!</span>
+                <div class="viedo">
+                    <!-- <video width="100%" height="100%" poster="IMG/watercolor-4116932.png" loop controls>
+                        <source src="https://www.youtube.com/embed/s9d44ikc02k" type="video/mp4">
+                    </video> -->
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xbO1CY1PXkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>당신의 기분에 맞는 노래는 000의 00000 입니다!<br>### 한 기분에 이 노래는 어떠신가요?<br>결과가 만족스럽지 않으시다면 개선 사항을 적어주세요!</p>
+                <ul class="shares">
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/link-solid.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/Facebook.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/Twitter.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/Kakao.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/Kakao_Story.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/Naver.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="IMG/share/band.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="Surbtn"><span>다시하기</span></div>
+                <div class="Feedback">
+                    <lottie-player class="arrow" src="https://assets7.lottiefiles.com/packages/lf20_2z4qmxlj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                    <lottie-player class="FeedbackMailbox" src="https://assets1.lottiefiles.com/packages/lf20_3hFUmb.json"  background="transparent" speed="1" style="width: 300px; height: 300px;"></lottie-player>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+

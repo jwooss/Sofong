@@ -73,12 +73,12 @@ RandomSpan();
 setTimeout(() => {
     Loading()
     Screen.style.display = 'block';   
-}, 1000);
+}, 500);
 
 setTimeout(() => {
     Screen.style.opacity = '1';
     AniStart();     
-}, 1600);
+}, 1000);
 
 StartBTN.addEventListener('click', () => {
     Main.classList.add('Ani');    

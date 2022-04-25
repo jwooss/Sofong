@@ -36,7 +36,12 @@
     background-color: $MainColor1;
     transition: all .5s;
     // overflow: hidden;
-
+    .MainBouble{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: .5;
+    }
     .inner{
         position: relative;
         @include FlexMiddleLeft;
@@ -263,7 +268,7 @@
         top: 2%;
         left: 50%;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         column-gap: 8px;
         width: 50%;
@@ -271,14 +276,13 @@
         transform: translateX(-50%);
         z-index: 1005;
         li{
-            width: 100%;
+            position: relative;
+            width: 0%;
             height: 100%;
             border-radius: 10px;
             box-shadow: inset 2px 2px 3px #888;
             transition: all .75s;
-            &:nth-child(1){
-                background: linear-gradient(to right, #0984e3, #81ecec);
-            }
+            background: linear-gradient(to right, #81ecec, #74b9ff);
         }
     }
     .Section{
@@ -288,12 +292,19 @@
         width: 100%;
         height: 100%;
         .inner{
-            position: relative;
+            position: absolute;
+            display: none;
+            top: 0px;
+            left: 50%;
             max-width: 1280px;
             width: 100%;
-            height: 100%;
             margin: 0 auto;
-            padding: 120px 0px 60px 0px;
+            transform: translateX(-50%);
+            padding: 120px 0px 0px 0px;
+            background: url(/FE/IMG/SuveyBack.jpg) repeat-y center;
+            z-index: var(--j);
+            opacity: 0;
+            transition: all .5s;
             // background: url;
             .back{
                 position: absolute;
@@ -307,14 +318,14 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                margin: 2rem 12rem 0rem 12rem;
                 lottie-player{
                     position: absolute;
-                    left: -46%;
                     top: 50%;
-                    transform: translateY(-50%) scale(2.4);
-                }
-                h1{
-                    margin-left: 14rem;
+                    left: 0px;
+                    transform: translateY(-50%);
+                    width: 18rem;
+                    height: 18rem;
                 }
             }
             .middle{
@@ -325,21 +336,204 @@
                 place-items: center;
                 row-gap: 10rem;
                 width: 80%;
-                padding: 10rem 0px;
-                margin: 10rem auto;
+                padding: 8rem 0rem 10rem 0rem;
+                margin: 10rem auto 2rem auto;
             }
             .bottom{
                 position: relative;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                height: 40rem;
+                overflow: hidden;
                 lottie-player{
-                    
+                    position: absolute;
+                    left: 0rem;
+                    top: -6rem;
+                    width: 100rem;
+                    height: 72rem;
                 }
             }
         }
     }
 }
+
+.ResultLoading{
+    display: none;
+    opacity: 0;
+    z-index: -1005;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    .ReLoading{
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        @include FlexCenter();
+        flex-direction: column;
+        .Sofong{
+            @include FlexTopLeft();
+            margin-top: 12rem;
+            li{
+                all: unset;
+                font-size: $TitleSize;
+                font-family: 'Poor Story', cursive;
+                letter-spacing: -2px;
+                word-spacing: 2px;
+                text-shadow: 0px 0px 5px white;
+                font-weight: bold;
+                color: $TextColor;
+                z-index: 99;
+                animation: SofongLoading 2s infinite ease-in-out;
+                animation-delay: calc(.25s * var(--k));
+            }
+            @keyframes SofongLoading {
+                0%{
+                    transform: translateY(0%);
+                }
+                50%{
+                    transform: translateY(-6rem);
+                }
+                100%{
+                    transform: translateY(0%);
+                }
+            }
+        }
+        .ReLottie{
+            width: 50rem;
+            height: 50rem;
+            margin-top: 6rem;
+        }
+    }
+}
+.Result{
+    display: none;
+    opacity: 0;
+    z-index: -1005;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    .ReResult{
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 100%;
+        @include FlexCenter();
+        flex-direction: column;
+        .Title{
+            margin: 0px;
+            margin-top: 3rem;
+            font-size: 18rem;
+            cursor: default;
+        }
+        span{
+            display: block;
+            color: #333;
+            font-size: $BtnSize;
+            font-family: 'Poor Story', cursive;
+            font-weight: bold;
+            letter-spacing: -2px;
+            word-spacing: 4px;
+            margin-top: 4rem;
+        }
+        .viedo{
+            width: 90rem;
+            height: 50rem;
+            margin-top: 4rem;
+        }
+        p{
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Poor Story', cursive;
+            line-height: 3.2rem;
+        }
+        .shares{
+            @include FlexCenter();
+            width: 1000%;
+            column-gap: 1.4rem;
+            border-top: 3px double #2c3e5033;
+            padding: 3.8rem 0;
+
+            li{
+                a{
+                    @include FlexCenter();
+                    width: 4.6rem;
+                    height: 4.6rem;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px 5px #333;
+                    transition: all .25s;
+                    img{
+                        width: 100%;
+                    }
+                    &:hover{
+                        transform: translateY(-4%) scale(1.2);
+                    }
+                }
+                &:nth-child(1){
+                    a{
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .Surbtn{
+            position: absolute;
+            left: 50%;
+            bottom: -8%;
+            transform: translateX(-50%);
+            &::after{
+                content: '';
+                position: absolute;
+                left: -1.4rem;
+                bottom: -.6rem;
+                width: 0%;
+                height: 3px;
+                background-color: #333;
+                transform: rotate(-2deg);
+                transition: all .4s;
+            }
+            &:hover{
+                text-shadow: 2px 2px 5px white;
+                transform: translateX(-50%) scale(1.2) translateY(-4%);
+                &::after{
+                    width: 120%;
+                }
+            }
+        }
+        .Feedback{
+            position: absolute;
+            right: -22%;
+            bottom: -14%;
+            border-radius: 50%;
+            .arrow{
+                position: absolute;
+                left: -60%;
+                top: -20%;
+                transform: scale(.75);
+            }
+            .FeedbackMailbox{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
 // #Spe1{
 //     img{
 //         position: absolute;

@@ -83,9 +83,13 @@
  ┃ ┃ ┃ ┣📝_Title.scss
  ┃ ┃ ┃ ┗📝components.scss
  ┃ ┃ ┣📁page
- ┃ ┃ ┃ ┣📝style.css
- ┃ ┃ ┃ ┣📝style.css.map
- ┃ ┃ ┃ ┗📝style.scss
+ ┃ ┃ ┃ ┣📝_Anime.scss
+ ┃ ┃ ┃ ┣📝_Loading.scss
+ ┃ ┃ ┃ ┣📝_pages.scss
+ ┃ ┃ ┃ ┗📝_Section.scss
+ ┃ ┃ ┃ ┃ ┣📝style.css
+ ┃ ┃ ┃ ┃ ┣📝style.css.map
+ ┃ ┃ ┃ ┃ ┗📝style.scss
  ┃ ┃ ┣📝.gitignore
  ┃ ┃ ┣📝index.html
  ┃ ┃ ┣📝package.lock.json

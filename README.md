@@ -87,14 +87,14 @@
  ┃ ┃ ┃ ┣📝_Loading.scss
  ┃ ┃ ┃ ┣📝_pages.scss
  ┃ ┃ ┃ ┗📝_Section.scss
- ┃ ┃ ┃ ┃ ┣📝style.css
- ┃ ┃ ┃ ┃ ┣📝style.css.map
- ┃ ┃ ┃ ┃ ┗📝style.scss
- ┃ ┃ ┣📝.gitignore
- ┃ ┃ ┣📝index.html
- ┃ ┃ ┣📝package.lock.json
- ┃ ┃ ┣📝package.json
- ┃ ┃ ┗📝webpack.config.js
+ ┃ ┃ ┣📝style.css
+ ┃ ┃ ┣📝style.css.map
+ ┃ ┃ ┗📝style.scss
+ ┃ ┣📝.gitignore
+ ┃ ┣📝index.html
+ ┃ ┣📝package.lock.json
+ ┃ ┣📝package.json
+ ┃ ┗📝webpack.config.js
  ┣📁BE
  ┃ ┣📁config
  ┃ ┃ ┣📝__init__.py

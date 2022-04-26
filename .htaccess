@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.sofong\.live|sofong\.com)
+RewriteRule (.*) http://www.sofong.live/FE/$1 [L]

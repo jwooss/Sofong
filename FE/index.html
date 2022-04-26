@@ -17,10 +17,7 @@
     <meta name="twitter:image" content="IMG/preview.png" />
     <meta property="og:url" content="www.naver.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- 독도 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <!-- Poor, Dongle 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
@@ -30,19 +27,23 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="IMG/favicon/favicon.ico" type="image/x-icon">
+    <!-- 카카오 공유 Script -->
+    <script src="https://kit.fontawesome.com/290aa9bf0d.js" crossorigin="anonymous"></script>
+    <!-- FontAweSome Personal Key -->
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <!-- Clipboard.js -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
     <!-- Lottie Script -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- BodyMovin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.2/lottie.min.js"
         integrity="sha512-R47oG09eydaf225nXyDdSWJ8frKwxkC7QIHXdPpbUx9KaAiC6akjpWxTBw1hb7whk7P2sJNuRhS2ljSBegnIPA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-    <!-- AOS CDN Animation on Scroll -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Interactive Lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <!-- 스타일, 스크립트 -->
     <link rel="stylesheet" href="SASS/style.css">
-    <script type="module" src="JS/components/page.js" defer></script>
-    <script type="module" src="JS/components/Survey.js"></script>
-    <script type="module" src="JS/components/animation.js" defer></script>
+    <script src="JS/script.js"></script>
 </head>
 <body>
     <!-- 로딩 페이지 -->
@@ -53,6 +54,7 @@
         </div>
     </div>
     <!-- 메인 스크린 -->
+    <input id="t4-input">
     <div class="screen">
         <div class="section1 Main" id="Sec1">
             <lottie-player class="MainBouble" src="JS/JSON/lf30_editor_evsrsiij.json"  background="transparent"  speed=".5"  loop  autoplay></lottie-player>
@@ -171,49 +173,44 @@
         </div>
         <div class="Result">
             <div class="ReResult">
-                <div class="Title">Sofong</div>
+                <h1 class="Title">Sofong</h1>
                 <span>음.. 당신에겐 이런 노래가 좋겠군요!</span>
                 <div class="viedo">
                     <!-- <video width="100%" height="100%" poster="IMG/watercolor-4116932.png" loop controls>
                         <source src="https://www.youtube.com/embed/s9d44ikc02k" type="video/mp4">
                     </video> -->
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xbO1CY1PXkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3rFPEuWKlbk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p>당신의 기분에 맞는 노래는 000의 00000 입니다!<br>### 한 기분에 이 노래는 어떠신가요?<br>결과가 만족스럽지 않으시다면 개선 사항을 적어주세요!</p>
                 <ul class="shares">
                     <li>
-                        <a href="#">
-                            <img src="IMG/share/link-solid.svg" alt="">
+                        <a href="#" data-clipboard-action="copy" data-clipboard-target="#t4-input" class="normalLinkShare">
+                            <img src="IMG/share/Link.png" alt="URL Share Icon">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="IMG/share/Facebook.png" alt="">
+                            <img src="IMG/share/FaceBook.png" alt="FaceBook Share Icon">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="IMG/share/Twitter.png" alt="">
+                            <img src="IMG/share/Twitter.svg" alt="Twitter Share Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnKakao">
+                            <img src="IMG/share/KakaoTalk.png" alt="KakaoTalk Share Icon">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="IMG/share/Kakao.png" alt="">
+                            <img src="IMG/share/Naver.png" alt="Naver Share Icon">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="IMG/share/Kakao_Story.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="IMG/share/Naver.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="IMG/share/band.png" alt="">
+                            <img src="IMG/share/NaverBand.png" alt="Naver Band Share Icon">
                         </a>
                     </li>
                 </ul>
@@ -225,11 +222,23 @@
             </div>
         </div>
         <div class="MailForm">
-            <form>
-                <h1>건의 사항</h1>
-                <input type="text" placeholder="">
+            <form method="post">
+                <h1 class="Title">건의 사항</h1>
+                <p>개선할 점, 오류, 앞으로 추가되면 좋을 것 같은 기능들을 마음껏 써주시면<br>더 좋은 모습으로 발전하겠습니다.</p>
+                <div class="text">
+                    <ul class="toolbar">
+                        <li><button data-S="굵게" ><i class="fa-solid fa-bold"></i></button></li>
+                        <li><button data-S="기울게" ><i class="fa-solid fa-italic"></i></button></li>
+                        <li><button data-S="밑줄" ><i class="fa-solid fa-underline"></i></button></li>
+                        <li><button data-S="취소선" ><i class="fa-solid fa-strikethrough"></i></button></li>
+                        <button class="submit" type="submit" name="mailForm">전송</button>
+                    </ul>
+                    <textarea class="des" id="console" spellcheck="False"></textarea>
+                </div>
+                <div class="closebtn">❌</div>
             </form>
         </div>
+        <div class="alertbtn">성공!</div>
     </div>
 </body>
 </html>

@@ -774,7 +774,7 @@ table {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 43rem;
+  height: 45rem;
   overflow: hidden;
 }
 
@@ -928,7 +928,7 @@ table {
 .Result .ReResult span {
   display: block;
   color: #333;
-  font-size: 5.2rem;
+  font-size: 4rem;
   font-family: 'Poor Story', cursive;
   font-weight: bold;
   letter-spacing: -2px;
@@ -939,7 +939,7 @@ table {
 .Result .ReResult .viedo {
   width: 90rem;
   height: 50rem;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .Result .ReResult p {
@@ -971,6 +971,7 @@ table {
 }
 
 .Result .ReResult .shares li a {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -992,6 +993,7 @@ table {
 
 .Result .ReResult .shares li a img {
   width: 100%;
+  pointer-events: none;
 }
 
 .Result .ReResult .shares li a:hover {
@@ -1003,12 +1005,26 @@ table {
   width: 70%;
 }
 
+.Result .ReResult .shares li:nth-child(3) a img {
+  position: absolute;
+  width: 180%;
+}
+
+.Result .ReResult .shares li:nth-child(5) a img {
+  position: absolute;
+  width: 221%;
+  left: -121%;
+  top: -121%;
+}
+
 .Result .ReResult .Surbtn {
   position: absolute;
   left: 50%;
   bottom: -8%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .Result .ReResult .Surbtn::after {
@@ -1027,12 +1043,64 @@ table {
 
 .Result .ReResult .Surbtn:hover {
   text-shadow: 2px 2px 5px white;
-  -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%);
-          transform: translateX(-50%) scale(1.2) translateY(-4%);
+  -webkit-transform: translateX(-50%) scale(1) translateY(-4%);
+          transform: translateX(-50%) scale(1) translateY(-4%);
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  -webkit-animation: iden 2s infinite ease-in-out;
+          animation: iden 2s infinite ease-in-out;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .Result .ReResult .Surbtn:hover::after {
   width: 120%;
+}
+
+@-webkit-keyframes iden {
+  0% {
+    -webkit-transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+            transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+  }
+  75% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
+  }
+}
+
+@keyframes iden {
+  0% {
+    -webkit-transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+            transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+  }
+  75% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
+            transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
+  }
 }
 
 .Result .ReResult .Feedback {
@@ -1046,7 +1114,7 @@ table {
 .Result .ReResult .Feedback .arrow {
   position: absolute;
   left: -60%;
-  top: -20%;
+  top: -10%;
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
 }
@@ -1057,9 +1125,16 @@ table {
 }
 
 .MailForm {
+  position: fixed;
   display: none;
   opacity: 0;
   z-index: -9999;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .MailForm::before {
@@ -1086,16 +1161,232 @@ table {
 
 .MailForm form {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 60rem;
-  height: 40rem;
+  width: 80rem;
+  height: 60rem;
   background-color: white;
-  border-radius: 2rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 4rem 4rem;
   z-index: 9999;
+}
+
+.MailForm form .Title {
+  font-size: 6rem;
+  margin: 0px;
+  cursor: default;
+}
+
+.MailForm form p {
+  display: block;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+  font-size: 2.4rem;
+  font-family: 'Poor Story', cursive;
+  margin: 2.4rem 0rem 3rem 0rem;
+  line-height: 2.6rem;
+}
+
+.MailForm form .text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 2px 2px 5px #999;
+          box-shadow: inset 2px 2px 5px #999;
+  border-radius: .2rem;
+}
+
+.MailForm form .text .toolbar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #d2dae2;
+  padding: .2rem;
+  border-radius: .2rem;
+}
+
+.MailForm form .text .toolbar li button {
+  all: unset;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 4rem;
+  height: 4rem;
+  -webkit-transition: all .20s;
+  transition: all .20s;
+  color: #333;
+  cursor: pointer;
+}
+
+.MailForm form .text .toolbar li button:hover {
+  background-color: #d2dae2;
+}
+
+.MailForm form .text .toolbar li button:hover::after {
+  content: attr(data-S);
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -100%;
+  left: 50%;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 1.6rem;
+  background-color: #333;
+  padding: 1rem;
+  font-family: 'Poor Story', cursive;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: .4rem;
+}
+
+.MailForm form .text .toolbar li button:focus {
+  -webkit-box-shadow: 0px 0px 4px #555;
+          box-shadow: 0px 0px 4px #555;
+}
+
+.MailForm form .text .toolbar .submit {
+  all: unset;
+  position: absolute;
+  width: 8rem;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  color: #333;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: 'Poor Story', cursive;
+  background-color: #333;
+  margin: .2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.MailForm form .text .toolbar .submit:focus {
+  -webkit-box-shadow: 0px 0px 16px #555;
+          box-shadow: 0px 0px 16px #555;
+}
+
+.MailForm form .text textarea {
+  all: unset;
+  position: relative;
+  display: block;
+  width: calc(100% - 2rem * 2);
+  height: 84%;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+  font-size: 2.6rem;
+  font-family: 'Poor Story', cursive;
+  margin-top: 5rem;
+  padding: 0rem 2rem 1rem 2rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.MailForm form .closebtn {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  font-size: 3rem;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+  cursor: pointer;
+}
+
+.alertbtn {
+  position: fixed;
+  display: block;
+  top: 76%;
+  left: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  color: white;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: 'Poor Story', cursive;
+  padding: 1rem 1.8rem;
+  border-radius: .6rem;
+  -webkit-box-shadow: 0px 0px 10px white;
+          box-shadow: 0px 0px 10px white;
+  opacity: 0;
+  z-index: -9999;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: translate(-50%, -50%) scale(1.4);
+          transform: translate(-50%, -50%) scale(1.4);
+}
+
+.red {
+  z-index: 9999;
+  opacity: 1;
+  background-color: #fd4a3d;
+}
+
+.green {
+  z-index: 9999;
+  opacity: 1;
+  background-color: #5dfd3d;
+}
+
+.yellow {
+  z-index: 9999;
+  opacity: 1;
+  background-color: #fdf73d;
+}
+
+#t4-input {
+  opacity: 0;
+  z-index: -9999;
 }
 
 html {

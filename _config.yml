@@ -3,3 +3,4 @@ plugins:
   - jekyll-redirect-from
 redirect_from:
   - /FE
+baseurl: FE/index.html

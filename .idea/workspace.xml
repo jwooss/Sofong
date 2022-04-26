@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85d5aad1-a4de-49c0-9625-243d74197a59" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/config/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/config/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/config/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/config/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/config/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/my_settings.py" beforeDir="false" />
+    <list default="true" id="85d5aad1-a4de-49c0-9625-243d74197a59" name="변경" comment="[Add] : Django Project Setting">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +74,14 @@
       <option name="presentableId" value="Default" />
       <updated>1650263707142</updated>
     </task>
+    <task id="LOCAL-00001" summary="[Add] : Django Project Setting">
+      <created>1650936688622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650936688622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,5 +94,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Add] : Django Project Setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] : Django Project Setting" />
   </component>
 </project>

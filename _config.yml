@@ -1,6 +1,1 @@
-theme: jekyll-theme-hacker
-plugins:
-  - jekyll-redirect-from
-redirect_from:
-  - /FE
-baseurl: FE/index.html
+baseurl: /FE/index.html

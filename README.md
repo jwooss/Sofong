@@ -95,16 +95,37 @@
  ┃ ┣📝package.lock.json
  ┃ ┣📝package.json
  ┃ ┗📝webpack.config.js
- ┣📁BE
- ┃ ┣📁config
- ┃ ┃ ┣📝__init__.py
- ┃ ┃ ┣📝asgi.py
- ┃ ┃ ┣📝settings.py
- ┃ ┃ ┣📝urls.py
- ┃ ┃ ┗📝wsgi.py
- ┃ ┣📝manage.py
- ┃ ┣📝my_settings.py
- ┣📝READMD.md
+ ┣📁Sofong_apps
+ ┃ ┣📁__pycache__
+ ┃ ┃ ┣📝__init__.cpython-39.pyc
+ ┃ ┃ ┣📝admin.cpython-39.pyc
+ ┃ ┃ ┣📝apps.cpython-39.pyc
+ ┃ ┃ ┗📝models.cpython-39.pyc
+ ┃ ┣📁migrations
+ ┃ ┃ ┣📁__pycache__
+ ┃ ┃ ┃ ┣📝__init__.cpython-39.pyc
+ ┃ ┃ ┃ ┗📝0001_initial.cpython-39.pyc
+ ┃ ┃ ┣📝__init.py__
+ ┃ ┃ ┗📝0001_inital.py
+ ┃ ┣📝__init__.py
+ ┃ ┣📝admin.py
+ ┃ ┣📝apps.py
+ ┃ ┣📝models.py
+ ┃ ┣📝tests.py
+ ┃ ┗📝views.py
+ ┣📁Sofong_project
+ ┃ ┣📁__pycache__
+ ┃ ┃ ┣📝__init__.cpython-39.pyc
+ ┃ ┃ ┣📝settings.cpython-39.pyc
+ ┃ ┃ ┗📝urls.cpython-39.pyc
+ ┃ ┣📝__init__.py
+ ┃ ┣📝asgi.py
+ ┃ ┣📝settings.py
+ ┃ ┣📝urls.py
+ ┃ ┗📝wsgi.py
+ ┣📝db.sqlite3
+ ┣📝manage.py
+ ┗📝READMD.md
 
 ```
 <br><br>

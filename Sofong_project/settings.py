@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Sofong_apps'
+    'Sofong_apps',
+    'FE'
 ]
 
 MIDDLEWARE = [

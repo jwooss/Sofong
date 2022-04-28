@@ -1,0 +1,27 @@
+
+$breakPoints: (
+    'mobile-extra-small': (min-width: 340px),
+    'mobile-portrait-only': (max-width: 479px),
+    'mobile-landscape': (max-width: 816px),
+    'tablet-portrait': (min-width: 768px),
+    'desktop-template': (min-width: 768px),
+    'tablet-portrait-only': (max-width: 768px),
+    'tablet-big': (min-width: 970px),
+    'desktop': (min-width: 1024px),
+    'desktop-medium': (min-width: 1200px),
+    'desktop-large': (min-width: 1440px),
+    'desktop-extra-large': (min-width: 1920px) 
+    // 340 479 816 768 769 970 1024 1200 1440 1920
+);
+
+@mixin MediaQuery($name) {
+    @if map-has-key($breakPoints, $name) {
+        @media only all and #{Inspect(map-get($breakPoints, $name))}{
+            @content;
+        }
+    }
+    @else{
+        @warn '없는 Break Point야 잠 꺠자 현민아';
+    }
+}
+

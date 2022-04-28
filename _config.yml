@@ -1,0 +1,8 @@
+gems:
+    - jekyll-redirect-from
+
+whitelist:
+    - jekyll-redirect-from
+
+redirect_from:
+    - /FE

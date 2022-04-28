@@ -1,26 +1,13 @@
 
-$breakPoints: (
-    'mobile-extra-small': (),
-    'mobile-portrait-only': (),
-    'mobile-landscape': (),
-    'tablet-portrait': (),
-    'desktop-template': (),
-    'tablet-portrait-only': (),
-    'tablet-big': (),
-    'desktop': (),
-    'desktop-medium': (),
-    'desktop-large': (),
-    'desktop-extra-large': () 
-    // 340 479 816 768 769 970 1024 1200 1440 1920
-);
+// @import 'mediaQ';
 
-@mixin MediaQuery($name) {
-    @if map-has-key($breakPoints, $name) {
-        @media only all and #{Inspect(map-get($breakPoints, $name))}{
-            @content;
-        }
-    }
-    @else{
-        @warn '없는 Break Point야 잠 꺠자 현민아';
-    }
-}
+// @include MediaQuery('desktop-extra-large'){
+//     html{
+//         font-size: 62.5%;
+//     }
+// };
+// @include MediaQuery('desktop-large'){
+//     html{
+//         font-size: 50%;
+//     }
+// };

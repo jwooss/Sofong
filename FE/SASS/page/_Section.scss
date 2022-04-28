@@ -344,7 +344,7 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-                height: 43rem;
+                height: 45rem;
                 overflow: hidden;
                 lottie-player{
                     position: absolute;
@@ -443,7 +443,7 @@
         span{
             display: block;
             color: #333;
-            font-size: $BtnSize;
+            font-size: 4rem;
             font-family: 'Poor Story', cursive;
             font-weight: bold;
             letter-spacing: -2px;
@@ -453,7 +453,7 @@
         .viedo{
             width: 90rem;
             height: 50rem;
-            margin-top: 4rem;
+            margin-top: 8rem;
         }
         p{
             margin-top: 6rem;
@@ -474,6 +474,7 @@
 
             li{
                 a{
+                    position: relative;
                     @include FlexCenter();
                     width: 4.6rem;
                     height: 4.6rem;
@@ -483,6 +484,7 @@
                     transition: all .25s;
                     img{
                         width: 100%;
+                        pointer-events: none;
                     }
                     &:hover{
                         transform: translateY(-4%) scale(1.2);
@@ -495,6 +497,24 @@
                         }
                     }
                 }
+                &:nth-child(3){
+                    a{
+                        img{
+                            position: absolute;
+                            width: 180%;
+                        }
+                    }
+                }
+                &:nth-child(5){
+                    a{
+                        img{
+                            position: absolute;
+                            width: 221%;
+                            left: -121%;
+                            top: -121%;
+                        }
+                    }
+                }
             }
         }
         .Surbtn{
@@ -502,6 +522,7 @@
             left: 50%;
             bottom: -8%;
             transform: translateX(-50%);
+            transition: all .4s;
             &::after{
                 content: '';
                 position: absolute;
@@ -515,9 +536,29 @@
             }
             &:hover{
                 text-shadow: 2px 2px 5px white;
-                transform: translateX(-50%) scale(1.2) translateY(-4%);
+                transform: translateX(-50%) scale(1) translateY(-4%);
+                animation-delay: .4s;
+                animation: iden 2s infinite ease-in-out;;
+                transition: all .4s;
                 &::after{
                     width: 120%;
+                }
+            }
+            @keyframes iden {
+                0%{
+                    transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+                }
+                25%{
+                    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+                }
+                50%{
+                    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+                }
+                75%{
+                    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+                }
+                100%{
+                    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
                 }
             }
         }
@@ -530,7 +571,7 @@
             .arrow{
                 position: absolute;
                 left: -60%;
-                top: -20%;
+                top: -10%;
                 transform: scale(.75);
             }
             .FeedbackMailbox{
@@ -542,10 +583,15 @@
 }
 
 .MailForm{
-    // z-index: 9999;
+    position: fixed;
     display: none;
     opacity: 0;
     z-index: -9999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
     &::before{
         content: '';
         position: fixed;
@@ -560,16 +606,177 @@
     }
     form{
         position: absolute;
+        @include FlexTopLeft();
+        flex-direction: column;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 60rem;
-        height: 40rem;
+        width: 80rem;
+        height: 60rem;
         background-color: white;
-        border-radius: 2rem;
-        padding: 2rem;
+        border-radius: 1rem;
+        padding: 4rem 4rem;
         z-index: 9999;
+        .Title{
+            font-size: $QusPSize;
+            margin: 0px;
+            cursor: default;
+        }
+        p{
+            display: block;
+            letter-spacing: -2px;
+            word-spacing: 2px;
+            font-weight: bold;
+            color: #333;
+            font-size: 2.4rem;
+            font-family: 'Poor Story', cursive;
+            margin: 2.4rem 0rem 3rem 0rem;
+            line-height: 2.6rem;
+        }
+        .text{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 2px 2px 5px #999;
+            border-radius: .2rem;
+            .toolbar{
+                position: absolute;
+                @include FlexTopLeft();
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 4rem;
+                border-bottom: 1px solid #d2dae2;
+                padding: .2rem;
+                border-radius: .2rem;
+                li{
+                    button{
+                        all: unset;
+                        position: relative;
+                        @include FlexCenter();
+                        font-size: 2rem;
+                        font-weight: bold;
+                        width: 4rem;
+                        height: 4rem;
+                        transition: all .20s;
+                        color: #333;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #d2dae2;
+                        }
+                        &:hover::after{
+                            content: attr(data-S);
+                            position: absolute;
+                            width: max-content;
+                            bottom: -100%;
+                            left: 50%;
+                            letter-spacing: -2px;
+                            word-spacing: 2px;
+                            color: #fff;
+                            font-size: 1.6rem;
+                            background-color: #333;
+                            padding: 1rem;
+                            font-family: 'Poor Story', cursive;
+                            transform: translateX(-50%);
+                            border-radius: .4rem;
+                        }
+                        &:focus{
+                            box-shadow: 0px 0px 4px #555;
+                        }
+                    }
+                }
+                .submit{
+                    all: unset;
+                    position: absolute;
+                    width: 8rem;
+                    height: 100%;
+                    top: 0px;
+                    right: 0px;
+                    letter-spacing: -2px;
+                    word-spacing: 2px;
+                    color: #333;
+                    text-align: center;
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                    font-family: 'Poor Story', cursive;
+                    background-color: #333;
+                    margin: .2rem;
+                    color: white;
+                    cursor: pointer;
+                    &:focus{
+                        box-shadow: 0px 0px 16px #555;
+                    }
+                }
+            }
+            textarea{
+                all: unset;
+                position: relative;
+                display: block;
+                width: calc(100% - 2rem * 2);
+                height: 84%;
+                letter-spacing: -2px;
+                word-spacing: 2px;
+                font-weight: bold;
+                color: #333;
+                font-size: 2.6rem;
+                font-family: 'Poor Story', cursive;
+                margin-top: 5rem;
+                padding: 0rem 2rem 1rem 2rem;
+                transition: all .5s;
+                // box-shadow: inset 2px 2px 5px #888;
+            }
+        }
+        .closebtn{
+            position: absolute;
+            right: 0rem;
+            top: 0rem;
+            font-size: 3rem;
+            transform: translate(-100%, 100%);
+            cursor: pointer;
+        }
     }
+}
+
+.alertbtn{
+    position: fixed;
+    display: block;
+    top: 76%;
+    left: 50%;
+    width: max-content;
+    height: max-content;
+    color: white;
+    letter-spacing: -2px;
+    word-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.6rem;
+    font-family: 'Poor Story', cursive;
+    padding: 1rem 1.8rem;
+    border-radius: .6rem;
+    box-shadow: 0px 0px 10px white;
+    opacity: 0;
+    z-index: -9999;
+    transition: all .5s;
+    transform: translate(-50%, -50%) scale(1.4);       
+}
+.red{
+    z-index: 9999;
+    opacity: 1;
+    background-color: rgb(253, 74, 61);
+}
+.green{
+    z-index: 9999;
+    opacity: 1;
+    background-color: rgb(93, 253, 61);
+}
+.yellow{
+    z-index: 9999;
+    opacity: 1;
+    background-color: rgb(253, 247, 61);
+}
+
+#t4-input{
+    opacity: 0;
+    z-index: -9999;
 }
 
 // #Spe1{
